@@ -8,11 +8,11 @@ import UploadPhotoStep from "../Steps/UploadPhotoStep/UploadPhotoStep";
 import FinalProjectStep from "../Steps/FinalProjectStep/FinalProjectStep";
 
 const RenderingZone = () => {
-  const [currentStep, setCurrentStep] = useState(1); 
+  const [currentStep, setCurrentStep] = useState(1);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [selectedBudgetStyle, setSelectedBudgetStyle] = useState(null);
   const [uploadedPhoto, setUploadedPhoto] = useState(null);
-  const [finalImage, setFinalImage] = useState(null); 
+  const [finalImage, setFinalImage] = useState(null);
 
   const handleRoomSelect = (room) => {
     setSelectedRoom(room);
@@ -21,16 +21,16 @@ const RenderingZone = () => {
 
   const handleBudgetStyleSelect = (budgetStyle) => {
     setSelectedBudgetStyle(budgetStyle);
-    setCurrentStep(3); 
+    setCurrentStep(3);
   };
 
   const handlePhotoUpload = (photo) => {
     setUploadedPhoto(photo);
-    setCurrentStep(4); 
+    setCurrentStep(4);
   };
 
   const handleFinalStep = async () => {
-    const url = 'http://127.0.0.1:5000/get_insane_image_1337';
+    const url = "http://127.0.0.1:5000/get_insane_image_1337";
     const data = {
       room_choice: selectedRoom,
       style_budget_choice: selectedBudgetStyle,
@@ -49,7 +49,9 @@ const RenderingZone = () => {
   return (
     <div className={styles.outerWrapper}>
       {currentStep === 1 && <RoomStep onSelect={handleRoomSelect} />}
-      {currentStep === 2 && <BudgetStyleStep onSelect={handleBudgetStyleSelect} />}
+      {currentStep === 2 && (
+        <BudgetStyleStep onSelect={handleBudgetStyleSelect} />
+      )}
       {currentStep === 3 && <UploadPhotoStep onUpload={handlePhotoUpload} />}
       {currentStep === 4 && (
         <FinalProjectStep
@@ -57,7 +59,7 @@ const RenderingZone = () => {
           budgetStyle={selectedBudgetStyle}
           photo={uploadedPhoto}
           onFinish={handleFinalStep}
-          finalImage={finalImage} 
+          finalImage={finalImage}
         />
       )}
     </div>

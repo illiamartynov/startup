@@ -8,8 +8,12 @@ const UploadPhotoStep = ({ onUpload }) => {
 
   const handleUpload = (event) => {
     const uploadedPhoto = event.target.files[0];
-    setPhoto(URL.createObjectURL(uploadedPhoto));
-    setIsPhotoSelected(true); 
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPhoto(reader.result); 
+      setIsPhotoSelected(true); 
+    };
+    reader.readAsDataURL(uploadedPhoto); // Этот метод начинает чтение содержимого файла как URL
   };
 
   const handleSubmit = () => {
