@@ -30,7 +30,7 @@ const RenderingZone = () => {
   };
 
   const handleFinalStep = async () => {
-    const url = "localhost:5000/get_insane_image_1337";
+    const url = "http://localhost:5000/get_insane_image_1337";
     const data = {
       room_choice: selectedRoom,
       style_budget_choice: selectedBudgetStyle,

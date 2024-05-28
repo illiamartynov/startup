@@ -10,8 +10,9 @@ const UploadPhotoStep = ({ onUpload }) => {
     const uploadedPhoto = event.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
-      setPhoto(reader.result); 
-      setIsPhotoSelected(true); 
+      const imageData = reader.result.replace("data:image/jpeg;base64,", "");
+      setPhoto(imageData); 
+      setIsPhotoSelected(true);  
     };
     reader.readAsDataURL(uploadedPhoto); 
   };
