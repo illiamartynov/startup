@@ -30,21 +30,25 @@ const RenderingZone = () => {
   };
 
   const handleFinalStep = async () => {
-    const url = "http://127.0.0.1:5000/get_insane_image_1337";
+    const url = "localhost:5000/get_insane_image_1337";
     const data = {
       room_choice: selectedRoom,
       style_budget_choice: selectedBudgetStyle,
       input_image: uploadedPhoto,
     };
-
+  
     try {
       const response = await axios.post(url, data);
       const outputImage = response.data.output_image;
       setFinalImage(outputImage);
+  
+      // Выводим request в консоль
+      console.log("Request:", data);
     } catch (error) {
       console.error("Error during the final step:", error);
     }
   };
+  
 
   return (
     <div className={styles.outerWrapper}>

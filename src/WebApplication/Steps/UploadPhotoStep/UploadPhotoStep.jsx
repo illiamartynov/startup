@@ -13,7 +13,7 @@ const UploadPhotoStep = ({ onUpload }) => {
       setPhoto(reader.result); 
       setIsPhotoSelected(true); 
     };
-    reader.readAsDataURL(uploadedPhoto); // Этот метод начинает чтение содержимого файла как URL
+    reader.readAsDataURL(uploadedPhoto); 
   };
 
   const handleSubmit = () => {

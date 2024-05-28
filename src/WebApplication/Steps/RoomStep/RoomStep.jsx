@@ -8,9 +8,9 @@ import styles from "../Steps.module.css";
 const RoomStep = ({ onSelect }) => {
   const rooms = [
     { name: "Bathroom", image: bathroomImage },
-    { name: "Living room", image: livingRoomImage },
-    { name: "Bedroom", image: bedroomImage },
-    { name: "Kitchen", image: kitchenRoom },
+    { name: "living room", image: livingRoomImage },
+    { name: "bedroom", image: bedroomImage },
+    { name: "kitchen", image: kitchenRoom },
   ]; 
 
   return (

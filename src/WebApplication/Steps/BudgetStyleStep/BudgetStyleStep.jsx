@@ -8,10 +8,10 @@ import styles from "../Steps.module.css";
 
 const BudgetStyleStep = ({ onSelect }) => {
   const options = [
-    { name: "Low cost", image: budgetImage },
-    { name: "Medium", image: mediumImage },
-    { name: "Expensive", image: luxuryImage },
-    { name: "Ultra Expensive", image: ultraLuxuryImage },
+    { name: "Contemporary, Moderate", image: budgetImage },
+    { name: "Art-Deco, High-End", image: mediumImage },
+    { name: "Modern, Basic", image: luxuryImage },
+    { name: "Traditional, Average", image: ultraLuxuryImage },
   ];
 
   return (
