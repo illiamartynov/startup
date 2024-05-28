@@ -1,0 +1,153 @@
+.outerWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.outerWrapper h1 {
+  font-size: calc(25 / 400 * 100vmin);
+  margin-bottom: 0;
+  letter-spacing: calc(2 / 400 * 100vmin);
+  
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.labelFocused {
+  font-size: calc(15 / 400 * 100vmin);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(40 / 400 * 100vmin);
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  font-size: calc(15 / 400 * 100vmin);
+  pointer-events: none;
+}
+
+.labelFocused {
+  position: absolute;
+  top: calc(-18 / 400 * 100vmin);
+  left: calc(5 / 400 * 100vmin);
+  font-size: calc(12 / 400 * 100vmin);
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.input {
+    padding: 0;
+  background-color: white;
+  border: transparent;
+  border-radius: calc(5 / 400 * 100vmin);
+  transition: all 0.3s ease;
+  font-size: calc(15 / 400 * 100vmin);
+  padding-left: calc(10 / 400 * 100vmin);
+}
+
+.input:focus {
+  outline: none;
+  background-color: transparent;
+  border: calc(1 / 400 * 100vmin) solid #ccc;
+}
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.iconsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(130 / 400 * 100vmin);
+}
+.iconsWrapper img {
+  width: calc(25 / 400 * 100vmin);
+  height: calc(25 / 400 * 100vmin);
+}
+.formSender {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sendBtn {
+  position: absolute;
+  right: calc(7 / 400 * 100vmin);
+  top: 52%;
+  transform: translateY(-50%);
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  border: none;
+}
+.sendBtn img {
+  width: calc(20 / 400 * 100vmin);
+  height: calc(20 / 400 * 100vmin);
+  margin-top: 0;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  padding: calc(5 / 400 * 100vmin);
+  font-size: 0.8em;
+}
+.errorMessage {
+  color: red;
+}
+@media screen and (min-width: 1300px) {
+  .inputContainer{
+    height: calc(80 / 1200 * 100vmin);
+  }
+  .wrapper img {
+    width: calc(250 / 1200 * 100vmin);
+    height: calc(350 / 1200 * 100vmin);
+  }
+  .outerWrapper h1 {
+    font-size: calc(50 / 1200 * 100vmin);
+    letter-spacing: calc(3 / 1200 * 100vmin);
+    margin-top: 0;
+  }
+
+  .label {
+    font-size: calc(25 / 1200 * 100vmin);
+  }
+
+  .labelFocused {
+    font-size: calc(23 / 1200 * 100vmin);
+    top: calc(-10 / 400 * 100vmin);
+    left: calc(5/ 400 * 100vmin);
+  }
+  .input {
+    font-size: calc(30 / 1200 * 100vmin);
+
+  }
+  .formSender {
+    align-items: center;
+  }
+  
+  .sendBtn img {
+    width: calc(30 / 1200 * 100vmin);
+    height: calc(30 / 1200 * 100vmin);
+  }
+}

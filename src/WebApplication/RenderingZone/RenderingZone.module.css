@@ -1,0 +1,12 @@
+.outerWrapper{
+    margin-top: calc((50 / 430 ) * 100vmin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1300px) {
+    .outerWrapper{
+        margin-top: calc((50 / 1200 ) * 100vmin);
+    }
+}

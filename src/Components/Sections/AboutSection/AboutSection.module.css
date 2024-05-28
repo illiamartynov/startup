@@ -1,0 +1,117 @@
+.aboutSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  background: url("../../../Images/BackgroundPhotos/OpeningPhoto.jpeg") 50% 0%;
+  background-size: 100vh 100vh;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: 50% 0;
+}
+
+.aboutSectionWrapper {
+  transition: background-position 0.5s ease;
+}
+
+.titleWrapper {
+  padding: calc(130 / 400 * 100vmin) calc(19 / 400 * 100vmin) 0 0;
+  text-align: right;
+  font-size: calc(13 / 400 * 100vmin);
+}
+.titleWrapper h1 {
+  text-shadow: calc(2 / 400 * 100vmin) calc(3 / 400 * 100vmin)
+    calc(4 / 400 * 100vmin) rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.scrolled {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+.descInnerWrapper{
+  margin-bottom: calc(40 / 400 * 100vmin);
+}
+.subTitleWrapper {
+  margin-top: calc(100 / 1200 * 100vmin);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  color: var(--text-color);
+  padding: 0 0 0 calc(20 / 400 * 100vmin);
+}
+
+.subTitleWrapper h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Futura Medium";
+  font-size: calc(23 / 400 * 100vmin);
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.subTitleWrapper span {
+  margin: 0;
+  font-size: calc(16 / 400 * 100vmin);
+  line-height: calc(25 / 400 * 100vmin);
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.starsLogo {
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .aboutSectionWrapper {
+    background-size: 100% 170%;
+    min-height: 100vh;
+    background-position: 50% calc(-550 / 1200 * 100vmin);
+  }
+  .subTitleWrapper {
+    padding: 0 calc(150 / 1200* 100vmin);
+    display: flex;
+    max-width: calc(1800 / 1200* 100vmin);
+    margin: 0 auto;
+    margin-top: calc(150 / 1200* 100vmin);
+
+  }
+  .titleWrapper {
+    text-align: left;
+    font-size: calc(36 / 1200 * 100vmin);
+    padding: calc(200 / 1200 * 100vmin) calc(150 / 1200* 100vmin) 0;
+    display: flex;
+    max-width: calc(1800 / 1200* 100vmin);
+    margin: 0 auto;
+    margin-top: calc(150 / 1200* 100vmin);
+  }
+
+  .descInnerWrapper h1 {
+    display: none;
+  }
+  .descInnerWrapper span {
+    display: inline-block;
+    font-family: "Futura Medium";
+    font-weight: bold;
+    font-size: calc(80 / 1200 * 100vmin);
+    width: 60vmin;
+    line-height: calc(80 / 1200 * 100vmin);
+  }
+  .starsLogo {
+    display: block;
+    height: calc(500 / 1200 * 100vmin);
+    width: calc(400 / 1200 * 100vmin);
+    margin-right: calc(200 / 1200 * 100vmin);
+  }
+
+  .descInnerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

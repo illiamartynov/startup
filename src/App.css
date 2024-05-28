@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Futura Medium";
+  src: url("../src/Fonts/bold/FuturaBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Futura Book";
+  src: url("../src/Fonts/usual/FuturaUsual.ttf") format("truetype");
+}
+:root {
+  --font: "Futura Book";
+  --fontBold: "Futura Medium";
+  --text-color: black;
+  --active-color: #dfc476;
+  --min-screen-size: 400;
+  --text-size-in-pixels16: 16;
+  --text-size-in-pixels20: 20;
+  --size15px: calc(
+    var(--text-size-in-pixels15) / var(--min-screen-size) * 100vmin
+  );
+  --size20px: calc(
+    var(--text-size-in-pixels20) / var(--min-screen-size) * 100vmin
+  );
+}
+
+body {
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}

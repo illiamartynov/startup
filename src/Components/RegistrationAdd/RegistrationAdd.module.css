@@ -1,0 +1,57 @@
+.addWrapper {
+  margin-top: calc(40 / 400 * 100vmin);
+  padding: calc((30 / 400) * 100vmin);
+  background-color: #e9ecea;
+}
+.addWrapperInnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: calc((300 / 400) * 100vmin);
+  height: calc((280 / 400) * 100vmin);
+}
+.textWrapper span {
+  font-size: calc((35 / 400) * 100vmin);
+  font-family: var(--fontBold);
+  text-transform: uppercase;
+  letter-spacing: calc((1 / 400) * 100vmin);
+  font-weight: 700;
+}
+.textWrapper button {
+  background-color: transparent;
+  border-color: transparent;
+  width: calc((330 / 400) * 100vmin);
+}
+.textWrapper img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1300px) {
+  .addWrapper {
+    margin-top: calc(80 / 1200 * 100vmin);
+    padding: calc((50 / 1200) * 100vmin);
+  }
+  .addWrapperInnerWrapper {
+    margin: 0 auto;
+    max-width: calc((1800 / 1200) * 100vmin);
+  }
+  .textWrapper {
+    width: 100%;
+    height: calc((400 / 1200) * 100vmin);
+    flex-direction: row;
+  }
+  .textWrapper span {
+    font-size: calc((60 / 1200) * 100vmin);
+    letter-spacing: calc((3 / 1200) * 100vmin);
+    width: 35%;
+  }
+  .textWrapper button {
+    width: 40%;
+  }
+}

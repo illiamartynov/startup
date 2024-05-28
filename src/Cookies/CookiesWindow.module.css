@@ -1,0 +1,188 @@
+.wrapper {
+  /* margin-top: calc(10 / 400 * 100vmin); */
+  background-color: #e9ecea;
+  font-size: calc(17 / 400 * 100vmin);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform: translateY(100%);
+  z-index: 3;
+}
+.innerWrapper {
+  padding: calc(20 / 400 * 100vmin);
+}
+.show {
+  transform: translateY(0);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.toggleWrapper {
+  display: flex;
+  margin-bottom: calc(10 / 400 * 100vmin);
+  width: calc(150 / 400 * 100vmin);
+  justify-content: space-between;
+  align-items: center;
+}
+.textWrapper h1 {
+  margin: 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: calc(60 / 400 * 100vmin);
+  height: calc(33 / 400 * 100vmin);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: calc(33 / 400 * 100vmin);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: calc(25 / 400 * 100vmin);
+  width: calc(25 / 400 * 100vmin);
+  left: calc(4 / 400 * 100vmin);
+  bottom: calc(4 / 400 * 100vmin);
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #dfc476;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 calc(1 / 400 * 100vmin) var(--active-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(calc(26 / 400 * 100vmin));
+  -ms-transform: translateX(calc(26 / 400 * 100vmin));
+  transform: translateX(calc(26 / 400 * 100vmin));
+}
+
+.butnsWrapper {
+  margin-top: calc(50 / 400 * 100vmin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.butnsWrapper button {
+  font-size: calc(17 / 400 * 100vmin);
+  letter-spacing: calc(0.5 / 400 * 100vmin);
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  height: calc(60 / 400 * 100vmin);
+  border-radius: calc(10 / 400 * 100vmin);
+  border-color: transparent;
+  background-color: var(--active-color);
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.butnsWrapper button:last-of-type {
+  background-color: white;
+  border: calc(4 / 400 * 100vmin) solid var(--active-color);
+  color: var(--active-color);
+}
+
+@media screen and (min-width: 1300px) {
+  .innerWrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(2200 / 1200 * 100vmin);
+    margin: 0 auto;
+  }
+  .wrapper {
+    font-size: calc(25 / 1200 * 100vmin);
+    height: 45%;
+  }
+  .settingBtnsWrapper {
+    display: flex;
+    margin-top: calc(100 / 1200 * 100vmin);
+    width: 100%;
+  }
+  .textWrapper p {
+    line-height: calc(40 / 1200 * 100vmin);
+  }
+  .toggleWrapper span {
+    font-weight: 700;
+    margin-right: calc(20 / 1200 * 100vmin);
+    font-size: calc(27 / 1200 * 100vmin);
+  }
+  .toggleWrapper {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .switch {
+    width: calc(140 / 1200 * 100vmin);
+    height: calc(65 / 1200 * 100vmin);
+  }
+  .slider:before {
+    height: calc(45 / 1200 * 100vmin);
+    width: calc(45 / 1200 * 100vmin);
+    left: calc(10 / 1200 * 100vmin);
+    bottom: calc(10 / 1200 * 100vmin);
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(calc(60 / 1200 * 100vmin));
+    -ms-transform: translateX(calc(60 / 1200 * 100vmin));
+    transform: translateX(calc(60 / 1200 * 100vmin));
+  }
+  .row {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .butnsWrapper {
+    margin-top: 0;
+    width: 30%;
+  }
+
+  .butnsWrapper button {
+    letter-spacing: calc(0.5 / 400 * 100vmin);
+    height: calc(100 / 1200 * 100vmin);
+    width: 90%;
+    font-size: calc(30 / 1200 * 100vmin);
+    border-radius: calc(15 / 1200 * 100vmin);
+  }
+
+  .butnsWrapper button:last-of-type {
+    background-color: white;
+    border: calc(7 / 1200 * 100vmin) solid var(--active-color);
+    color: var(--active-color);
+  }
+  .wrapperBtnAndText {
+    width: calc(1200 / 1200 * 100vmin);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,29 @@
+.desc {
+  font-size: calc(16 / 400 * 100vmin);
+  line-height: calc(25 / 400 * 100vmin);
+}
+.gallerySubTitle {
+  display: none;
+}
+.galleryWrapper {
+  padding: calc(20 / 400 * 100vmin) calc(20 / 400 * 100vmin) 0 calc(20 / 400 * 100vmin);
+}
+@media screen and (min-width: 1300px) {
+  .gallerySubTitle {
+    display: block;
+    text-transform: uppercase;
+    font-size: calc(64 / 1200 * 100vmin);
+    font-family: "Futura Medium";
+    font-weight: bold;
+  }
+  .galleryWrapper {
+    display: flex;
+    padding: calc(140 / 1200 * 100vmin);
+    justify-content: space-between;
+    max-width: calc(1800 / 1200 * 100vmin);
+    margin: 0 auto;
+  }
+  .desc{
+    width: 45%;
+  }
+}

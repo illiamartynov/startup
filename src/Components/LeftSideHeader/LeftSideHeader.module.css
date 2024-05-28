@@ -1,0 +1,20 @@
+.headerLeftSideWrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.logoImg {
+  margin-left: calc(50 / 400 * 100vmin);
+  width: calc(140 / 400 * 100vmin);
+  height: calc(20 / 400 * 100vmin);
+}
+
+@media screen and (min-width: 1300px) {
+  .logoImg {
+    height: calc(50 / 1200 * 100vmin);
+    width: calc(350 / 1200 * 100vmin);
+    margin-left: calc(20   / 1200 * 100vmin);
+
+  }
+  
+}

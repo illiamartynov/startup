@@ -1,0 +1,124 @@
+.registInputs {
+  margin-top: calc(40 / 400 * 100vmin);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  width: calc(300 / 400 * 100vmin);
+  height: 100%;
+}
+.registInputs label {
+  font-weight: 700;
+  margin-bottom: calc(5 / 400 * 100vmin);
+}
+.labelNewsletter {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.registInputs h1 {
+  font-size: calc(23 / 400 * 100vmin);
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+.registInputs input {
+  font-size: calc(20 / 400 * 100vmin);
+  font-weight: normal;
+  border-radius: calc(5 / 400 * 100vmin);
+  border: calc(1 / 400 * 100vmin) solid black;
+  background-color: transparent;
+  color: black;
+  padding: calc(10 / 400 * 100vmin);
+  font-family: "Futura Medium";
+  letter-spacing: 0.05rem;
+  outline: none;
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.registInputs label {
+  font-size: calc(18 / 400 * 100vmin);
+}
+.registInputs input::placeholder {
+  color: black;
+  text-transform: capitalize;
+}
+
+.registInputs input:focus::placeholder {
+  color: transparent;
+}
+
+.registInputs {
+  opacity: 1;
+  transition: opacity 0.5s ease, height 0.5s ease;
+  position: relative;
+}
+
+.registInputs.hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.registInputs button {
+  width: 100%;
+  font-size: calc(18 / 400 * 100vmin);
+  border-color: transparent;
+  background-color: #dfc476;
+  border-radius: calc(5 / 400 * 100vmin);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  margin-bottom: calc(30 / 400 * 100vmin);
+  height: calc(50 / 400 * 100vmin);
+  font-weight: 700;
+  letter-spacing: calc(0.8 / 400 * 100vmin);
+}
+.socialNets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(150 / 400 * 100vmin);
+  margin: 0 auto;
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+.socialNets img {
+  width: calc(50 / 400 * 100vmin);
+  height: calc(50 / 400 * 100vmin);
+}
+
+@media screen and (min-width: 1300px) {
+  .registInputs {
+    margin-top: calc(70 / 1200 * 100vmin);
+    width: 100%;
+  }
+  .registInputs input {
+    font-size: calc(25 / 1200 * 100vmin);
+    border-radius: calc(20 / 1200 * 100vmin);
+    padding: calc(20 / 1200 * 100vmin);
+    margin-bottom: calc(60 / 1200 * 100vmin);
+    border: calc(1 / 1200 * 100vmin) solid black;
+  }
+  .registInputs button {
+    width: 100%;
+    height: 100%;
+    font-size: calc(30 / 1200 * 100vmin);
+    padding: calc(15 / 1200 * 100vmin);
+    border-radius: calc(10 / 1200 * 100vmin);
+    margin-bottom: calc(50 / 1200 * 100vmin);
+  }
+  .registInputs label {
+    font-size: calc(25 / 1200 * 100vmin);
+  }
+  .socialNets img {
+    width: calc(80 / 1200 * 100vmin);
+    height: calc(80 / 1200 * 100vmin);
+  }
+  .socialNets {
+    width: calc(250 / 1200 * 100vmin);
+  }
+  .registInputs h1 {
+    font-size: calc(45 / 1200 * 100vmin);
+    margin-bottom: calc(20 / 400 * 100vmin);
+  }
+}

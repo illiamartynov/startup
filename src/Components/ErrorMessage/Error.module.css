@@ -1,0 +1,20 @@
+.errorMessage {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc((13 / 400) * 100vmin);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+  .errorMessage {
+    color: red;
+  }
+
+@media screen and (min-width: 1300px) {
+  .errorMessage {
+    font-size: calc((20 / 1200) * 100vmin);
+  }
+}

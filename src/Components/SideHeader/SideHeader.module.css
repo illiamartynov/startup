@@ -1,0 +1,87 @@
+.wrapper {
+  padding: calc(5 / 400 * 100vmin);
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+    height: calc(150 / 400 * 100vmin); /* bilo 185 dla 4 iconok */
+  background-color: #DFC476;
+  z-index: 4;
+  border-top-right-radius: calc(20 / 400 * 100vmin);
+  border-bottom-right-radius: calc(20 / 400 * 100vmin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s ease;
+
+}
+.wrapper button, img{
+    cursor: pointer;
+}
+.innerWrapper {
+    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+  margin-left: calc(-10 / 400 * 100vmin);
+  transition: width 0.3s ease;
+
+}
+
+.imgSocialOpen {
+  width: calc(30 / 400 * 100vmin);
+  height: calc(30 / 400 * 100vmin);
+}
+.imgSocialClose {
+    width: 0;
+    height: 0;
+  }
+
+.closeOpenBtn{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110%;
+    background-color: transparent;
+    border-color: transparent;
+}
+.menuImg {
+    transition: transform 0.3s ease;
+    width: calc(30 / 400 * 100vmin);
+    height: calc(30 / 400 * 100vmin);
+  }
+
+  .menuImg.rotate {
+    transform: rotate(180deg);
+  }
+
+  .showMenu {
+    width: calc(43 / 400 * 100vmin);
+  }
+  .closeMenu{
+    margin-left: calc(-7 / 400 * 100vmin);
+  }
+
+@media screen and (min-width: 1300px) {
+  .menuImg {
+    transition: transform 0.3s ease;
+    width: calc(60 / 1200* 100vmin);
+    height: calc(60 / 1200* 100vmin);
+}
+.imgSocialOpen {
+  width: calc(60 / 1200* 100vmin);
+  height: calc(60 / 1200* 100vmin);
+}
+.showMenu {
+  width: calc(100 / 1200 * 100vmin);
+}
+.wrapper {
+    height: calc(100 / 400 * 100vmin); 
+
+}
+}

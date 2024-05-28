@@ -1,0 +1,113 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(30 / 400 * 100vmin);
+  flex-direction: column;
+  background-color: #e9ecea;
+  padding: calc(30 / 400 * 100vmin);
+}
+.innerWrapperKontacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.starsLogo {
+  width: calc(110 / 400 * 100vmin);
+  height: calc(150 / 400 * 100vmin);
+}
+
+.kontaktWrapper {
+  margin-top: calc(50 / 400 * 100vmin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: calc(15 / 400 * 100vmin);
+}
+
+.kontaktWrapper h1 {
+  letter-spacing: calc(2 / 400 * 100vmin);
+  margin: 0 auto;
+  margin-bottom: calc(30 / 400 * 100vmin);
+}
+
+.kontaktWrapper div {
+  display: flex;
+  flex-direction: column;
+  height: calc(45 / 400 * 100vmin);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kontaktWrapper div:first-of-type {
+  margin-bottom: calc(30 / 400 * 100vmin);
+}
+
+.skroty div {
+  height: calc(130 / 400 * 100vmin);
+}
+
+.footerLogo{
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .starsLogo {
+    width: calc(320 / 1200 * 100vmin);
+    height: calc(400 / 1200 * 100vmin);
+  }
+
+  .wrapper {
+    padding: calc(100 / 1200 * 100vmin);
+  }
+
+  .kontaktWrapper {
+    align-items: flex-start;
+    margin-top: 0;
+    font-size: calc(25 / 1200 * 100vmin);
+  }
+
+  .kontaktWrapper h1 {
+    margin: 0;
+    letter-spacing: calc(3 / 1200 * 100vmin);
+    margin-bottom: calc(30 / 1200 * 100vmin);
+  }
+
+  .kontaktWrapper div {
+    height: calc(70 / 1200 * 100vmin);
+    align-items: flex-start;
+  }
+  .innerWrapperKontacts {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: calc(1800 / 1200 * 100vmin);
+  }
+  .kontaktWrapper div:first-of-type {
+    margin-bottom: calc(50 / 1200 * 100vmin);
+  }
+  .skroty {
+    height: 100%;
+  }
+
+  .skroty div {
+    height: calc(250 / 1200 * 100vmin);
+  }
+
+  .skroty h1 {
+    margin-bottom: calc(30 / 1200 * 100vmin);
+  }
+  .footerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(100 / 1200 * 100vmin);
+  }
+
+  .footerLogo img{
+    width: calc(400 / 1200 * 100vmin);
+  }
+}

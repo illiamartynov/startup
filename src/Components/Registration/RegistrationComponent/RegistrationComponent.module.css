@@ -1,0 +1,59 @@
+.registInputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.registInputs input {
+  font-size: calc(20 / 400 * 100vmin);
+  font-weight: normal;
+  border-radius: calc(10 / 400 * 100vmin);
+  border-color: transparent;
+  background-color: lightgrey;
+  color: black;
+  padding: calc(10 / 400 * 100vmin);
+  text-align: center;
+  font-family: "Futura Medium";
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  outline: none;
+  margin-bottom: calc(40 / 400 * 100vmin);
+}
+.registInputs input::placeholder {
+  color: black;
+  text-transform: capitalize;
+}
+
+.registInputs input:focus::placeholder {
+  color: transparent;
+}
+
+.registInputs {
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.registInputs.hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+
+@media screen and (min-width: 1300px) {
+  .registInputs {
+    margin-top: calc(100 / 1200* 100vmin);
+      width: 100%;
+  }
+  .registInputs input {
+    font-size: calc(30 / 1200 * 100vmin);
+    border-radius: calc(20 / 1200 * 100vmin);
+    padding: calc(20 / 1200 * 100vmin);
+    margin-bottom: calc(60 / 1200 * 100vmin);
+  }
+}

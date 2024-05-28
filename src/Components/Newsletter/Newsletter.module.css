@@ -1,0 +1,51 @@
+.wrapper h1 {
+  font-family: "Futura Medium";
+}
+.logo {
+  display: none;
+}
+.wrapper{
+  /* margin-bottom: calc(50 / 400 * 100vmin); */
+
+}
+
+@media screen and (min-width: 1300px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+  .logo {
+    display: block;
+  }
+  .wrapper img {
+    width: calc(250 / 1200 * 100vmin);
+    height: calc(350 / 1200 * 100vmin);
+  }
+  .outerWrapper h1 {
+    font-size: calc(50 / 1200 * 100vmin);
+    letter-spacing: calc(3 / 1200 * 100vmin);
+  }
+
+  .label {
+    font-size: calc(30 / 1200 * 100vmin);
+  }
+
+  .labelFocused {
+    font-size: calc(30 / 1200 * 100vmin);
+  }
+  .input {
+    font-size: calc(30 / 1200 * 100vmin);
+  }
+  .formSender {
+    align-items: center;
+  }
+  .formWrapper {
+    margin-top: calc(70 / 1200 * 100vmin);
+  }
+  .sendBtn img {
+    width: calc(50 / 1200 * 100vmin);
+    height: calc(50 / 1200 * 100vmin);
+  }
+}
