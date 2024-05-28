@@ -36,13 +36,12 @@ const RenderingZone = () => {
       style_budget_choice: selectedBudgetStyle,
       input_image: uploadedPhoto,
     };
-  
+    console.log(data);
     try {
       const response = await axios.post(url, data);
       const outputImage = response.data.output_image;
       setFinalImage(outputImage);
   
-      // Выводим request в консоль
       console.log("Request:", data);
     } catch (error) {
       console.error("Error during the final step:", error);
