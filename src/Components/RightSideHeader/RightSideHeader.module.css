@@ -110,7 +110,7 @@
   text-decoration: none;
 }
 .profileButton:hover {
-  cursor: pointer; 
+  cursor: pointer; /* Курсор становится указателем (рука с пальцем) */
 }
 @keyframes slideInOut {
   from {

@@ -13,6 +13,8 @@ const RenderingZone = () => {
   const [selectedBudgetStyle, setSelectedBudgetStyle] = useState(null);
   const [uploadedPhoto, setUploadedPhoto] = useState(null);
   const [finalImage, setFinalImage] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleRoomSelect = (room) => {
     setSelectedRoom(room);
@@ -25,13 +27,16 @@ const RenderingZone = () => {
   };
 
   const handlePhotoUpload = (photo) => {
+    // Добавить проверку на валидность изображения
     setUploadedPhoto(photo);
     setCurrentStep(4);
   };
 
   const handleFinalStep = async () => {
+    setIsLoading(true);
+    setError(null);
+    
     const url = "http://localhost:5000/get_insane_image_1337";
-
     const cleanedPhoto = uploadedPhoto.replace(/^data:image\/\w+;base64,/, "");
 
     const data = {
@@ -39,25 +44,23 @@ const RenderingZone = () => {
       style_budget_choice: selectedBudgetStyle,
       input_image: cleanedPhoto,
     };
-    
-    console.log(data);
+
     try {
       const response = await axios.post(url, data);
       const outputImage = response.data.output_image;
       setFinalImage(outputImage);
-  
-      console.log("Request:", data);
     } catch (error) {
+      setError("Ошибка при отправке данных на сервер");
       console.error("Error during the final step:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <div className={styles.outerWrapper}>
       {currentStep === 1 && <RoomStep onSelect={handleRoomSelect} />}
-      {currentStep === 2 && (
-        <BudgetStyleStep onSelect={handleBudgetStyleSelect} />
-      )}
+      {currentStep === 2 && <BudgetStyleStep onSelect={handleBudgetStyleSelect} />}
       {currentStep === 3 && <UploadPhotoStep onUpload={handlePhotoUpload} />}
       {currentStep === 4 && (
         <FinalProjectStep
@@ -66,6 +69,8 @@ const RenderingZone = () => {
           photo={uploadedPhoto}
           onFinish={handleFinalStep}
           finalImage={finalImage}
+          isLoading={isLoading}
+          error={error}
         />
       )}
     </div>
