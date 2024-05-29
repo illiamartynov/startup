@@ -57,14 +57,16 @@ const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
     <div className={styles.kontaktsWrapper}>
       <div className={styles.innerWrapper}>
         {initial ? (
+            <Link to="/application" className={styles.profileButton}>
+
           <div
             className={`${styles.profileContainer}`} 
           >
             <img src={star} alt="Profile" className={styles.profileImage} />{" "}
-            <Link to="/application" className={styles.profileButton}>
               <button className={styles.profileButton}>APP</button>
-            </Link>
           </div>
+          </Link>
+
         ) : (
           <img
             src={isTop ? profileWhite : profile}

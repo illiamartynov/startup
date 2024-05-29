@@ -31,11 +31,15 @@ const RenderingZone = () => {
 
   const handleFinalStep = async () => {
     const url = "http://localhost:5000/get_insane_image_1337";
+
+    const cleanedPhoto = uploadedPhoto.replace(/^data:image\/\w+;base64,/, "");
+
     const data = {
       room_choice: selectedRoom,
       style_budget_choice: selectedBudgetStyle,
-      input_image: uploadedPhoto,
+      input_image: cleanedPhoto,
     };
+    
     console.log(data);
     try {
       const response = await axios.post(url, data);
@@ -47,7 +51,6 @@ const RenderingZone = () => {
       console.error("Error during the final step:", error);
     }
   };
-  
 
   return (
     <div className={styles.outerWrapper}>

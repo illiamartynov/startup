@@ -4,6 +4,8 @@
 }
 .innerWrapper {
   display: flex;
+  align-items: center;
+
 }
 
 .kontaktsWrapper {
@@ -12,7 +14,7 @@
   justify-content: flex-end;
 }
 .innerWrapper img:last-child {
-  margin-left: calc(20 / 400 * 100vmin);
+  margin-left: calc(15 / 400 * 100vmin);
 }
 
 .kontaktsWrapper {
@@ -96,7 +98,6 @@
 .profileContainer{
   display: flex;
   align-items: center;
-
 }
 
 .profileButton{
@@ -106,6 +107,10 @@
   color: var(--active-color);
   padding: 0;
   margin-left: calc(5 / 400 * 100vmin);
+  text-decoration: none;
+}
+.profileButton:hover {
+  cursor: pointer; 
 }
 @keyframes slideInOut {
   from {
@@ -158,5 +163,9 @@
   .qwe {
     width: calc(450 / 1200 * 100vmin);
     margin: 0 auto;
+  }
+  .profileButton{
+    font-size: calc(50 / 1200 * 100vmin);
+    margin-left: calc(10 / 1200 * 100vmin);
   }
 }
