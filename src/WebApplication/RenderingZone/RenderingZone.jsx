@@ -48,7 +48,8 @@ const RenderingZone = () => {
     try {
       const response = await axios.post(url, data);
       const outputImage = response.data.output_image;
-      setFinalImage(outputImage);
+      const prefixedImage = `data:image/png;base64,${outputImage}`; 
+      setFinalImage(prefixedImage);
     } catch (error) {
       setError("Ошибка при отправке данных на сервер");
       console.error("Error during the final step:", error);
