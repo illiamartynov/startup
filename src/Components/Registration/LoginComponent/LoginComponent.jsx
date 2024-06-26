@@ -7,7 +7,6 @@ import apple from "../../../Images/Icons/apple.png";
 import Error from "../../ErrorMessage/Error"; 
 import config from '../../../../config';
 
-
 const LoginComponent = ({ show, closeMenu }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -63,7 +62,28 @@ const LoginComponent = ({ show, closeMenu }) => {
       window.location.reload();
     } catch (error) {
       console.error("Error sending request:", error);
-      if (error.code === "ERR_NETWORK") {
+      if (error.response) {
+        switch (error.response.status) {
+          case 400:
+          case 401:
+            setErrorMessage("Wrong Credentials");
+            break;
+          case 409:
+            setErrorMessage("This email address is already in use");
+            break;
+          case 403:
+            setErrorMessage("Access forbidden");
+            break;
+          case 404:
+            setErrorMessage("Server not found");
+            break;
+          case 500:
+            setErrorMessage("Internal server error");
+            break;
+          default:
+            setErrorMessage("Something went wrong");
+        }
+      } else if (error.code === "ERR_NETWORK") {
         setErrorMessage("Server problems, please try again later");
       } else {
         setErrorMessage("Something went wrong");

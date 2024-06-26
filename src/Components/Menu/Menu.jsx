@@ -38,20 +38,33 @@ const Menu = (props) => {
           <div className={styles.innerFooterWrapper}>
             <ul className={styles.muContentList}>
               <li>
-                <a onClick={() => {
+                <a
+                  onClick={() => {
                     toggleMenu();
-                  }} href="#projects">
+                  }}
+                  href="/#projects"
+                >
                   projecty
                 </a>
               </li>
               <li>
-              <Link to="/q&a">Q&A</Link>
+                <a
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                  href="/q&a"
+                >
+                  q&a
+                </a>
               </li>
 
               <li>
-                <a onClick={() => {
+                <a
+                  onClick={() => {
                     toggleMenu();
-                  }} href="#gallery">
+                  }}
+                  href="/#gallery1"
+                >
                   galeria
                 </a>
               </li>

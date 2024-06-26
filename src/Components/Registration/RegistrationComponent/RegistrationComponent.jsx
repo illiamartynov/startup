@@ -75,17 +75,32 @@ const RegistrationComponent = ({ show }) => {
 
       window.location.reload();
     } catch (error) {
-      console.error("Error during registration:", error);
-      if (error.code === "ERR_NETWORK") {
-        setFormData((prevState) => ({
-          ...prevState,
-          errorMessage: "Server problems, try again later",
-        }));
+      console.error("Error sending request:", error);
+      if (error.response) {
+        switch (error.response.status) {
+          case 400:
+          case 401:
+            setErrorMessage("Wrong Credentials");
+            break;
+          case 409:
+            setErrorMessage("This email address is already in use");
+            break;
+          case 403:
+            setErrorMessage("Access forbidden");
+            break;
+          case 404:
+            setErrorMessage("Server not found");
+            break;
+          case 500:
+            setErrorMessage("Internal server error");
+            break;
+          default:
+            setErrorMessage("Something went wrong");
+        }
+      } else if (error.code === "ERR_NETWORK") {
+        setErrorMessage("Server problems, please try again later");
       } else {
-        setFormData((prevState) => ({
-          ...prevState,
-          errorMessage: "Something went wrong",
-        }));
+        setErrorMessage("Something went wrong");
       }
     }
   }, [formData]);

@@ -132,6 +132,7 @@
     font-family: "Futura Medium";
     letter-spacing: calc(2 / 1200 * 100vmin);
     padding-right: 0;
+    
   }
   .profileInitial {
     width: calc((40 / 1200) * 100vmin);

@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
   const [isMenuRotated, setIsMenuRotated] = useState(false);
-  const [initial, setInitial] = useState("A");
+  const [initial, setInitial] = useState("");
 
   useEffect(() => {
     const userID = Cookies.get("userID");
