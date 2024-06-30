@@ -5,7 +5,7 @@ CREATE SEQUENCE user_id_seq INCREMENT 1 START 1;
 CREATE TABLE "user" (
     id BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
     firstname VARCHAR(40) NOT NULL,
-    lastname VARCHAR(40) NOT NULL,
+    lastname VARCHAR(40),
     email VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(70) NOT NULL,
     provider VARCHAR(10) NOT NULL,

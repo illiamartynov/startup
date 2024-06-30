@@ -72,21 +72,41 @@ const RenderingZone = () => {
     }
   };
 
+  const handlePreviousStep = () => {
+    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1));
+  };
+
   return (
     <div className={styles.outerWrapper}>
       {currentStep === 1 && <RoomStep onSelect={handleRoomSelect} />}
-      {currentStep === 2 && <BudgetStyleStep onSelect={handleBudgetStyleSelect} />}
-      {currentStep === 3 && <UploadPhotoStep onUpload={handlePhotoUpload} />}
+      {currentStep === 2 && (
+        <div>
+          <BudgetStyleStep 
+            onSelect={handleBudgetStyleSelect} 
+            selectedRoom={selectedRoom} 
+          />
+          <button onClick={handlePreviousStep}>Назад</button>
+        </div>
+      )}
+      {currentStep === 3 && (
+        <div>
+          <UploadPhotoStep onUpload={handlePhotoUpload} />
+          <button onClick={handlePreviousStep}>Назад</button>
+        </div>
+      )}
       {currentStep === 4 && (
-        <FinalProjectStep
-          room={selectedRoom}
-          budgetStyle={selectedBudgetStyle}
-          photo={uploadedPhoto}
-          onFinish={handleFinalStep}
-          finalImage={finalImage}
-          isLoading={isLoading}
-          error={error}
-        />
+        <div>
+          <FinalProjectStep
+            room={selectedRoom}
+            budgetStyle={selectedBudgetStyle}
+            photo={uploadedPhoto}
+            onFinish={handleFinalStep}
+            finalImage={finalImage}
+            isLoading={isLoading}
+            error={error}
+          />
+          <button onClick={handlePreviousStep}>Назад</button>
+        </div>
       )}
     </div>
   );

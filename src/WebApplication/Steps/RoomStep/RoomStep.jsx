@@ -1,17 +1,16 @@
 import React from "react";
 import Element from "../../Components/Element/Element";
-import bathroomImage from "../../../Images/galleryImages/after8.jpg";
-import livingRoomImage from "../../../Images/galleryImages/after8.jpg";
-import bedroomImage from "../../../Images/galleryImages/after8.jpg";
-import kitchenRoom from "../../../Images/galleryImages/after8.jpg";
+import livingRoomImage from "../../../Images/webApp/roomTypes/living_room.jpg";
+import bedroomImage from "../../../Images/webApp/roomTypes/bedroom.jpg";
+import kitchenRoom from "../../../Images/webApp/roomTypes/kitchen.jpg";
 import styles from "../Steps.module.css";
+
 const RoomStep = ({ onSelect }) => {
   const rooms = [
-    { name: "Bathroom", image: bathroomImage },
     { name: "living room", image: livingRoomImage },
     { name: "bedroom", image: bedroomImage },
     { name: "kitchen", image: kitchenRoom },
-  ]; 
+  ];
 
   return (
     <div className={styles.wrapper}>

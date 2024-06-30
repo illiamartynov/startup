@@ -3,12 +3,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .elementsWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap: calc((20 / 430) * 100vmin); 
+  text-transform: capitalize;
 }
 .imageInput {
   opacity: 0;

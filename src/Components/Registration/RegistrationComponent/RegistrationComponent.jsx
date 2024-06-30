@@ -6,7 +6,6 @@ import google from "../../../Images/Icons/google.png";
 import apple from "../../../Images/Icons/apple.png";
 import config from '../../../../config';
 
-
 const RegistrationComponent = ({ show }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -75,32 +74,56 @@ const RegistrationComponent = ({ show }) => {
 
       window.location.reload();
     } catch (error) {
-      console.error("Error sending request:", error);
+      console.error("Error during registration:", error);
       if (error.response) {
         switch (error.response.status) {
           case 400:
           case 401:
-            setErrorMessage("Wrong Credentials");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "Wrong Credentials",
+            }));
             break;
           case 409:
-            setErrorMessage("This email address is already in use");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "This email address is already in use",
+            }));
             break;
           case 403:
-            setErrorMessage("Access forbidden");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "Access forbidden",
+            }));
             break;
           case 404:
-            setErrorMessage("Server not found");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "Server not found",
+            }));
             break;
           case 500:
-            setErrorMessage("Internal server error");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "Internal server error",
+            }));
             break;
           default:
-            setErrorMessage("Something went wrong");
+            setFormData((prevState) => ({
+              ...prevState,
+              errorMessage: "Something went wrong",
+            }));
         }
       } else if (error.code === "ERR_NETWORK") {
-        setErrorMessage("Server problems, please try again later");
+        setFormData((prevState) => ({
+          ...prevState,
+          errorMessage: "Server problems, try again later",
+        }));
       } else {
-        setErrorMessage("Something went wrong");
+        setFormData((prevState) => ({
+          ...prevState,
+          errorMessage: "Something went wrong",
+        }));
       }
     }
   }, [formData]);
