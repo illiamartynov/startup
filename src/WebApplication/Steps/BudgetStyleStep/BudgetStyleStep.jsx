@@ -20,21 +20,21 @@ const BudgetStyleStep = ({ onSelect, selectedRoom }) => {
 
   if (selectedRoom === "living room") {
     options = [
-      { name: "Contemporary", image: contemporaryLivingRoom },
-      { name: "Minimalistic", image: minimalisticLivingRoom },
-      { name: "Scandinavian", image: scandinavianLivingRoom },
+      { name: "Contemporary, High-End", image: contemporaryLivingRoom },
+      { name: "Minimalistic, Average", image: minimalisticLivingRoom },
+      { name: "Scandinavian, Moderate", image: scandinavianLivingRoom },
     ];
   } else if (selectedRoom === "bedroom") {
     options = [
-      { name: "Contemporary", image: contemporaryBedroom },
-      { name: "Minimalistic", image: minimalisticBedroom },
-      { name: "Scandinavian", image: scandinavianBedroom },
+      { name: "Contemporary, High-End", image: contemporaryBedroom },
+      { name: "Minimalistic, Average", image: minimalisticBedroom },
+      { name: "Scandinavian, Moderate", image: scandinavianBedroom },
     ];
   } else if (selectedRoom === "kitchen") {
     options = [
-      { name: "Contemporary", image: contemporaryKitchen },
-      { name: "Minimalistic", image: minimalisticKitchen },
-      { name: "Scandinavian", image: scandinavianKitchen },
+      { name: "Contemporary, High-End", image: contemporaryKitchen },
+      { name: "Minimalistic, Average", image: minimalisticKitchen },
+      { name: "Scandinavian, Moderate", image: scandinavianKitchen },
     ];
   }
 

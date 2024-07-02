@@ -1,6 +1,6 @@
 const config = {
-    baseUrl: "/api",
-    baseUrlGoogle: "",
+    baseUrl: "http://localhost:8080/api",
+    baseUrlGoogle: "http://localhost:8080",
   };
 //   console.log(config.baseUrl);
 // console.log(config.baseUrlGoogle);

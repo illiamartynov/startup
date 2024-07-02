@@ -39,7 +39,7 @@ const LoginComponent = ({ show, closeMenu }) => {
         setErrorMessage("You have not filled in all fields");
         return;
       }
-
+      console.log(`${config.baseUrl}/auth/login`)
       const response = await axios.post(`${config.baseUrl}/auth/login`, {
         email: email,
         password: password,
