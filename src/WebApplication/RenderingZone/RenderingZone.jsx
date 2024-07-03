@@ -62,11 +62,11 @@ const RenderingZone = () => {
       console.error("Error during the final step:", error);
 
       // Выводим заголовки и тело запроса в консоль для отладки
-      console.log("Request headers:", {
-        Authorization: `${bearerToken}`,
-      });
-      console.log("Request body:", data);
-      console.log("Link body:", url);
+      // console.log("Request headers:", {
+      //   Authorization: `${bearerToken}`,
+      // });
+      // console.log("Request body:", data);
+      // console.log("Link body:", url);
     } finally {
       setIsLoading(false);
     }

@@ -15,11 +15,10 @@ const Header = ({ opacity, isMenuOpen, setIsMenuOpen, page }) => {
   const [isTop, setIsTop] = useState(true);
   const [currentOpacity, setCurrentOpacity] = useState(1);
   const screenWidth = window.innerWidth;
-
   useEffect(() => {
     console.log(opacity)
     const handleScroll = () => {
-      if (window.scrollY <= 0 && page !== false) {
+      if (window.scrollY <= 0 && page !== true) {
         setIsTop(true);
         setScrolled(false);
       } else {

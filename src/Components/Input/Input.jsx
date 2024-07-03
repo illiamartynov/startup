@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Input.module.css";
 import emailjs from "emailjs-com";
-import send from "../../Images/Icons/right-arrow.png";
+import send from "../../Images/Icons/sendNew.png";
 
 const Input = ({ data, showApproved }) => {
   const [formData, setFormData] = useState({});
@@ -25,13 +25,13 @@ const Input = ({ data, showApproved }) => {
         if(data.fields.length === 3){
           setContainerHeight(`calc(600 / 1200 * 100vmin)`);
         }else{
-          setContainerHeight(`calc(180 / 1200 * 100vmin)`);
+          setContainerHeight(`calc(100 / 1200 * 100vmin)`);
         }
       } else {
         if(data.fields.length === 3){
           setContainerHeight(`calc(250 / 400 * 100vmin)`);
         }else{
-          setContainerHeight(`calc(100 / 400 * 100vmin)`);
+          setContainerHeight(`calc(70 / 400 * 100vmin)`);
         }
         
       }
@@ -75,7 +75,6 @@ const Input = ({ data, showApproved }) => {
       )
       .then(
         function (response) {
-          console.log("Email sent successfully:", response);
           if (response.status === 200) {
             showApproved(true);
           }

@@ -39,14 +39,12 @@ const LoginComponent = ({ show, closeMenu }) => {
         setErrorMessage("You have not filled in all fields");
         return;
       }
-      console.log(`${config.baseUrl}/auth/login`)
       const response = await axios.post(`${config.baseUrl}/auth/login`, {
         email: email,
         password: password,
       });
 
       const { id } = response.data;
-      console.log("User ID:", id);
 
       const authToken = response.headers.authorization;
       const expiresAt = new Date();

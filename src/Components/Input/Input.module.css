@@ -5,9 +5,13 @@
 }
 .outerWrapper h1 {
   font-size: calc(25 / 400 * 100vmin);
-  margin-bottom: 0;
-  letter-spacing: calc(2 / 400 * 100vmin);
-  
+  margin: 0;
+  margin-bottom: calc(10 / 400 * 100vmin);
+  font-size: calc(18 / 400 * 100vmin);
+  font-weight: 700;
+  line-height: calc(24 / 400 * 100vmin);
+  text-align: left;
+  font-family: "Futura Medium";
 }
 .wrapper {
   position: relative;
@@ -30,8 +34,8 @@
 .label {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 5%;
+  transform: translate(0, -50%);
   transition: all 0.3s ease;
   font-size: calc(15 / 400 * 100vmin);
   pointer-events: none;
@@ -47,13 +51,14 @@
 }
 
 .input {
-    padding: 0;
+  padding: 0;
   background-color: white;
   border: transparent;
-  border-radius: calc(5 / 400 * 100vmin);
+  border-radius: calc(10 / 400 * 100vmin);
   transition: all 0.3s ease;
   font-size: calc(15 / 400 * 100vmin);
   padding-left: calc(10 / 400 * 100vmin);
+  width: calc(230 / 400 * 100vmin);
 }
 
 .input:focus {
@@ -116,7 +121,7 @@
   color: red;
 }
 @media screen and (min-width: 1300px) {
-  .inputContainer{
+  .inputContainer {
     height: calc(80 / 1200 * 100vmin);
   }
   .wrapper img {
@@ -124,9 +129,12 @@
     height: calc(350 / 1200 * 100vmin);
   }
   .outerWrapper h1 {
-    font-size: calc(50 / 1200 * 100vmin);
     letter-spacing: calc(3 / 1200 * 100vmin);
     margin-top: 0;
+    font-size: calc(30 / 1200 * 100vmin);
+    font-weight: 700;
+    line-height: calc(32 / 1200 * 100vmin);
+    text-align: left;
   }
 
   .label {
@@ -134,18 +142,18 @@
   }
 
   .labelFocused {
-    font-size: calc(23 / 1200 * 100vmin);
-    top: calc(-10 / 400 * 100vmin);
-    left: calc(5/ 400 * 100vmin);
+    font-size: calc(18 / 1200 * 100vmin);
+    top: calc(-8 / 400 * 100vmin);
+    left: calc(5 / 400 * 100vmin);
   }
   .input {
     font-size: calc(30 / 1200 * 100vmin);
-
+    width: calc(400 / 1200 * 100vmin);
   }
   .formSender {
     align-items: center;
   }
-  
+
   .sendBtn img {
     width: calc(30 / 1200 * 100vmin);
     height: calc(30 / 1200 * 100vmin);

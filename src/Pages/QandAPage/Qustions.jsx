@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Questions.module.css";
 import Header from "../../Components/Header/Header";
 import QuestionsContent from "../../Components/QuestionsContent/QuestionsContetn";
-
+import Layout from "../../Layout/Layout";
 const Questions = () => {
   const QUESTIONS = [
     {
@@ -126,8 +126,9 @@ const Questions = () => {
   ];
   return (
     <div className={styles.qaWrapper}>
-      <Header page = {false} opacity={1}/>
-      <QuestionsContent questions={QUESTIONS} />
+      <Layout page={true}>
+        <QuestionsContent questions={QUESTIONS} />
+      </Layout>
     </div>
   );
 };

@@ -23,8 +23,6 @@ const EmailVer = () => {
     axios
       .get(apiUrl, { params })
       .then((response) => {
-        console.log("Response data:", response.data);
-        console.log(response.headers);
         const authToken = response.headers.authorization;
         
         Cookies.set("bearer_token", authToken);

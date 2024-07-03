@@ -70,7 +70,6 @@ const RegistrationComponent = ({ show }) => {
         requestData
       );
 
-      console.log("Registration successful!", response.data);
 
       window.location.reload();
     } catch (error) {
