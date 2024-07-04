@@ -1,9 +1,11 @@
 .contentWrapper {
   padding: calc(80 / 400 * 100vmin) calc(19 / 400 * 100vmin) 0 calc(19 / 400 * 100vmin);
+
 }
 .questionsTitle{
-  font-family: "Futura Medium";
-font-size: calc(35 / 400 * 100vmin);
+  font-weight: 700;
+  font-size: calc(35 / 400 * 100vmin);
+
 }
 .questionsWrapper{
   display: flex;
@@ -11,9 +13,11 @@ font-size: calc(35 / 400 * 100vmin);
   justify-content: space-between;
 }
 .questionName{
-  font-size: calc(30 / 400 * 100vmin);
-  font-family: "Futura Medium";
+  font-size: calc(25 / 400 * 100vmin);
   letter-spacing: calc(2 / 400 * 100vmin);
+  font-weight: 700;
+  /* font-family: var(--fontBold); */
+
 }
 .answer{
   font-size: calc(20 / 400 * 100vmin);
@@ -21,11 +25,18 @@ font-size: calc(35 / 400 * 100vmin);
   margin-top: calc(20 / 400 * 100vmin);
 }
 .questionElement{
-  margin-bottom: calc(20 / 400 * 100vmin);
+  margin-bottom: calc(40 / 400 * 100vmin);
+}
+.questionElement:last-child{
+  margin-bottom: calc(0 / 400 * 100vmin);
 }
 
 
 @media screen and (min-width: 1300px) {
+  .contentWrapper {
+    padding: calc(100 / 1200 * 100vmin) calc(80 / 1200 * 100vmin) 0 calc(80 / 1200 * 100vmin);
+  
+  }
   .questionName{
       font-size: calc(50 / 1200 * 100vmin);
   }

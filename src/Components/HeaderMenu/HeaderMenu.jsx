@@ -16,16 +16,19 @@ const HeaderMenu = ({ scrolled }) => {
   return (
     <ul className={`${styles.listWrapper} ${scrolled ? styles.scrolledMenu : ""}`}>
       <li>
-        <a href="/#projects">projekty</a>
+        <a href="/wizja">wizja</a>
       </li>
       <li>
-        <a href="/q&a">Q&A</a>
+        <a href="/q&a">o nas</a>
       </li>
       <li>
-        <a href="/#gallery1">galeria</a>
+        <a href="/">galeria</a>
       </li>
       <li>
-        <a href="/#Kontakts">kontakt</a>
+        <a href="/">cennik</a>
+      </li>
+      <li>
+        <a href="/q&a">q&a</a>
       </li>
     </ul>
   );

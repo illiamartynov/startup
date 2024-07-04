@@ -69,7 +69,6 @@
   .registrBtns {
     height: 100%;
     font-size: calc(25 / 1200 * 100vmin);
-    padding: calc(15 / 1200 * 100vmin);
     border-radius: calc(20 / 1200 * 100vmin);
   }
   .componentsWrapper {

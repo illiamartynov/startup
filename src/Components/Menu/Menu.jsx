@@ -42,9 +42,9 @@ const Menu = (props) => {
                   onClick={() => {
                     toggleMenu();
                   }}
-                  href="/#projects"
+                  href="/wizja"
                 >
-                  projecty
+                  wizja
                 </a>
               </li>
               <li>
@@ -54,7 +54,7 @@ const Menu = (props) => {
                   }}
                   href="/q&a"
                 >
-                  q&a
+                  o nas
                 </a>
               </li>
 
@@ -68,6 +68,27 @@ const Menu = (props) => {
                   galeria
                 </a>
               </li>
+              <li>
+                <a
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                  href="/#gallery1"
+                >
+                  cennik
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                  href="/q&a"
+                >
+                  q&a
+                </a>
+              </li>
+              
             </ul>
             <div className={styles.menuFooter}>
               <h2>Contacts</h2>

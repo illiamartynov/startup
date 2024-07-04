@@ -1,20 +1,40 @@
 .qaaa span {
   display: block;
   margin-top: calc(20 / 400 * 100vmin);
-  
 }
-
+.qaContentWrapper img{
+  margin-top: calc(30 / 1200 * 100vmin);
+  cursor: auto;
+}
 
 @media screen and (min-width: 1300px) {
   .qaaa{
     font-size: calc(35 / 1200 * 100vmin);
     line-height: 150%;
-    width: 60%;
   }
   .qaaa span {
     display: block;
     margin-top: calc(20 / 1200 * 100vmin);
     font-size: calc(40 / 1200 * 100vmin);
     margin-bottom: calc(5 / 1200 * 100vmin);
+    width: 70%;
+    /* font-family: var(--fontBold); */
+
   }
+  .qaContentWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: calc(100 / 1200 * 100vmin);
+  }
+  .qaContentWrapper img{
+
+    margin-top: 0px;
+  }
+  .qaContentWrapper img{
+    width: calc(450 / 1200 * 100vmin);
+    height: calc(450 / 1200 * 100vmin);
+  }
+  
 }
