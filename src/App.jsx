@@ -6,7 +6,7 @@ import EmailVer from "./Components/EmailVerification/EmailVer";
 import WebApp from "./WebApplication/WebApp"
 import Wizja from "./Pages/Wizija/Wizja";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import i18next from "../i18n.js";
 function App() {
   return (
     <Router>

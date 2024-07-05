@@ -10,12 +10,19 @@ import Registration from "../Registration/Registration";
 import Cookies from "js-cookie";
 import axios from "axios";
 import config from "../../../config";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
   const [isMenuRotated, setIsMenuRotated] = useState(false);
   const [initial, setInitial] = useState("");
+  const { i18n } = useTranslation();
 
+  const changeLanguage = () => {
+    const newLng = i18n.language === 'en' ? 'pl' : 'en';
+    console.log(newLng);
+    i18n.changeLanguage(newLng);
+  };
   useEffect(() => {
     const userID = Cookies.get("userID");
     if (userID) {
@@ -57,16 +64,12 @@ const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
     <div className={styles.kontaktsWrapper}>
       <div className={styles.innerWrapper}>
         {initial ? (
-            <Link to="/application" className={styles.profileButton}>
-
-          <div
-            className={`${styles.profileContainer}`} 
-          >
-            <img src={star} alt="Profile" className={styles.profileImage} />{" "}
+          <Link to="/application" className={styles.profileButton}>
+            <div className={`${styles.profileContainer}`}>
+              <img src={star} alt="Profile" className={styles.profileImage} />{" "}
               <button className={styles.profileButton}>APP</button>
-          </div>
+            </div>
           </Link>
-
         ) : (
           <img
             src={isTop ? profileWhite : profile}
@@ -74,8 +77,12 @@ const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
             onClick={toggleRegistration}
           />
         )}
-
-        <img src={isTop ? languageWhite : language} alt="ChangeLng" />
+        <img
+          src={isTop ? languageWhite : language}
+          alt="Change Language"
+          onClick={changeLanguage}
+          style={{ cursor: "pointer" }} // чтобы указатель мыши менялся при наведении на кнопку
+        />{" "}
       </div>
       <div
         className={`${styles.registrationOverlay} ${

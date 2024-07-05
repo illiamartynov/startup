@@ -12,6 +12,7 @@
   line-height: calc(24 / 400 * 100vmin);
   text-align: left;
   font-family: "Futura Medium";
+  letter-spacing: calc(2 / 400 * 100vmin);
 }
 .wrapper {
   position: relative;
