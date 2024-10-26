@@ -7,7 +7,7 @@ import RoomStep from "../Steps/RoomStep/RoomStep";
 import BudgetStyleStep from "../Steps/BudgetStyleStep/BudgetStyleStep";
 import UploadPhotoStep from "../Steps/UploadPhotoStep/UploadPhotoStep";
 import FinalProjectStep from "../Steps/FinalProjectStep/FinalProjectStep";
-
+import imagBack from "../../Images/Icons/back.png"
 const RenderingZone = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedRoom, setSelectedRoom] = useState(null);
@@ -81,21 +81,23 @@ const RenderingZone = () => {
       {currentStep === 1 && <RoomStep onSelect={handleRoomSelect} />}
       {currentStep === 2 && (
         <div>
+          <button className={styles.backBtn} onClick={handlePreviousStep}><img src={imagBack}/></button>
+
           <BudgetStyleStep 
             onSelect={handleBudgetStyleSelect} 
             selectedRoom={selectedRoom} 
           />
-          <button onClick={handlePreviousStep}>Назад</button>
-        </div>
+          </div>
       )}
       {currentStep === 3 && (
         <div>
+          <button className={styles.backBtn} onClick={handlePreviousStep}><img src={imagBack}/></button>
           <UploadPhotoStep onUpload={handlePhotoUpload} />
-          <button onClick={handlePreviousStep}>Назад</button>
         </div>
       )}
       {currentStep === 4 && (
         <div>
+          <button className={styles.backBtn} onClick={handlePreviousStep}><img src={imagBack}/></button>
           <FinalProjectStep
             room={selectedRoom}
             budgetStyle={selectedBudgetStyle}
@@ -105,7 +107,6 @@ const RenderingZone = () => {
             isLoading={isLoading}
             error={error}
           />
-          <button onClick={handlePreviousStep}>Назад</button>
         </div>
       )}
     </div>

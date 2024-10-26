@@ -7,7 +7,7 @@
     font-size: calc(35 / 400 * 100vmin);
 }
 
-.qaaa span {
+.qaaa span:nth-child(1) {
     display: block;
     margin-top: calc(20 / 400 * 100vmin);
 }
@@ -28,7 +28,12 @@
     letter-spacing: calc(2 / 400 * 100vmin);
     font-weight: 700;
 }
-
+.webPhoto{
+    display: none;
+}
+.mobPhoto{
+    display: block;
+}
 .answer {
     font-size: calc(20 / 400 * 100vmin);
     line-height: calc(35 / 400 * 100vmin);
@@ -41,12 +46,28 @@
 .questionElement:last-child {
     margin-bottom: calc(0 / 400 * 100vmin);
 }
-
+.helpDiv{
+    display: flex;
+    flex-direction: column;
+}
+.helpDiv span:nth-child(2){
+    font-weight: 700;
+    margin-top: calc(10 / 400 * 100vmin);
+    
+}
 @media screen and (min-width: 1300px) {
+    .qaaa span:nth-child(1) {
+        margin-top: 0;
+    }
     .contentWrapper {
         padding: calc(200 / 1200 * 100vmin) calc(80 / 1200 * 100vmin) 0 calc(80 / 1200 * 100vmin);
     }
-
+    .webPhoto{
+        display: block;
+    }
+    .mobPhoto{
+        display: none;
+    }
     .questionName {
         font-size: calc(50 / 1200 * 100vmin);
         margin-bottom: calc(40 / 1200 * 100vmin);
@@ -59,7 +80,7 @@
 
     .qaaa span:last-child {
         display: block;
-        font-size: calc(40 / 1200 * 100vmin);
+        font-size: calc(30 / 1200 * 100vmin);
         width: 90%;
     }
     .qaaa span {
@@ -81,8 +102,9 @@
     }
 
     .qaContentWrapper img {
-        width: calc(450 / 1200 * 100vmin);
+        width: calc(600 / 1200 * 100vmin);
         height: calc(450 / 1200 * 100vmin);
+        margin: 0;
     }
     .imgWizjaWrapper{
         display: flex;
@@ -99,8 +121,14 @@
         height: 100%;
         justify-content: space-around;
         width: 100%;
+
     }
     .flipped {
         flex-direction: row-reverse;
       }
+      .helpDiv span:nth-child(2){
+        margin: 0;
+        margin-bottom: calc(15 / 1200 * 100vmin);
+        
+    }
 }

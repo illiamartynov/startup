@@ -15,7 +15,7 @@ const RoomStep = ({ onSelect }) => {
   return (
     <div className={styles.wrapper}>
       <h2>Select room:</h2>
-      <div className={styles.elementsWrapper}>
+       <div className={styles.elementsWrapper}> {/* replace elementsWrapperRoom with elementsWrapper */}
         {rooms.map((room, index) => (
           <Element
             key={index}

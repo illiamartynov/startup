@@ -14,8 +14,8 @@
   }
   .qaaa span {
     display: block;
-    margin-top: calc(20 / 1200 * 100vmin);
-    font-size: calc(40 / 1200 * 100vmin);
+    margin-top: 0;
+    font-size: calc(30 / 1200 * 100vmin);
     margin-bottom: calc(5 / 1200 * 100vmin);
     width: 70%;
     /* font-family: var(--fontBold); */
@@ -27,6 +27,7 @@
     width: 100%;
     align-items: center;
     margin-bottom: calc(100 / 1200 * 100vmin);
+    margin-top: calc(40 / 1200 * 100vmin);
   }
   .qaContentWrapper img{
 

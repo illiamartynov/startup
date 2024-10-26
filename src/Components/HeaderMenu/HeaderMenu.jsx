@@ -19,13 +19,13 @@ const HeaderMenu = ({ scrolled }) => {
         <a href="/wizja">wizja</a>
       </li>
       <li>
-        <a href="/q&a">o nas</a>
+        <a href="/aboutUs">Zespół</a>
       </li>
       <li>
-        <a href="/">galeria</a>
+        <a href="/gallery">galeria</a>
       </li>
       <li>
-        <a href="/">cennik</a>
+        <a href="/payement">cennik</a>
       </li>
       <li>
         <a href="/q&a">q&a</a>

@@ -9,9 +9,7 @@ const Gallery = () => {
       
       <Slider />
       <div id="aboutus" className={styles.galleryWrapper}>
-        <span className={styles.gallerySubTitle}>
-          nasz <br></br>system
-        </span>
+        
         <span className={styles.desc}>
           Nasz zautomatyzowany system stworzy dla Ciebie profesjonalny projekt w
           kilka chwil. Możesz go użyć do publikacji ogłoszenia lub pokazać przy

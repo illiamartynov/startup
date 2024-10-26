@@ -66,7 +66,13 @@
 .starsLogo {
   display: none;
 }
-
+.descInnerWrapper span {
+  font-size: calc(20 / 400 * 100vmin);
+  line-height: calc(30 / 400 * 100vmin);
+}
+.descInnerWrapper span span{
+  color: var(--active-color);
+}
 @media screen and (min-width: 1300px) {
   .aboutSectionWrapper {
     background-size: 100% 170%;
@@ -94,9 +100,9 @@
   .descInnerWrapper h1 {
     display: none;
   }
-  .descInnerWrapper span {
+  .descInnerWrapper p {
     display: inline-block;
-    font-family: "Futura Medium";
+    /* font-family: "Futura Medium"; */
     font-weight: bold;
     font-size: calc(80 / 1200 * 100vmin);
     width: 60vmin;

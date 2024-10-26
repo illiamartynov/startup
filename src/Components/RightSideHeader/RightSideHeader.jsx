@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 
 const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
   const [isMenuRotated, setIsMenuRotated] = useState(false);
-  const [initial, setInitial] = useState("");
+  const [initial, setInitial] = useState("1");
   const { i18n } = useTranslation();
 
   const changeLanguage = () => {
@@ -72,9 +72,11 @@ const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
           </Link>
         ) : (
           <img
-            src={isTop ? profileWhite : profile}
+            // src={isTop ? profileWhite : profile}
+            src={profile}
             alt="Register"
             onClick={toggleRegistration}
+            // onClick={() => (window.location.href = "https://f947-46-22-166-10.ngrok-free.app")}
           />
         )}
         <img

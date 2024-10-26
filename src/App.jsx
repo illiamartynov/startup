@@ -7,6 +7,9 @@ import WebApp from "./WebApplication/WebApp"
 import Wizja from "./Pages/Wizija/Wizja";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import i18next from "../i18n.js";
+import PayementPage from "./Pages/Payement/PayementPage";
+import AboutUsPage from "./Pages/AboutUs/AboutUsPage";
+
 function App() {
   return (
     <Router>
@@ -16,6 +19,9 @@ function App() {
         <Route path="/wizja" element={<Wizja />} />
         <Route path="/email/verification" element={<EmailVer />} />
         <Route path="/application" element={<WebApp />} />
+        <Route path="/payement" element={<PayementPage />} />
+        <Route path="/aboutUs" element={<AboutUsPage />} />
+
       </Routes>
     </Router>
   );

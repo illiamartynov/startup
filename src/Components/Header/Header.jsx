@@ -11,14 +11,14 @@ import SideHeader from "../SideHeader/SideHeader";
 import RightSideHeader from "../RightSideHeader/RightSideHeader";
 
 const Header = ({ opacity, isMenuOpen, setIsMenuOpen, page }) => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isTop, setIsTop] = useState(true);
+  const [scrolled, setScrolled] = useState(page);
+  const [isTop, setIsTop] = useState(!page);
   const [currentOpacity, setCurrentOpacity] = useState(1);
   const screenWidth = window.innerWidth;
+
   useEffect(() => {
-    console.log(opacity)
     const handleScroll = () => {
-      if (window.scrollY <= 0 && page !== true) {
+      if (window.scrollY <= 0 && !page) {
         setIsTop(true);
         setScrolled(false);
       } else {
@@ -26,10 +26,10 @@ const Header = ({ opacity, isMenuOpen, setIsMenuOpen, page }) => {
         setScrolled(true);
       }
     };
-
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -53,7 +53,8 @@ const Header = ({ opacity, isMenuOpen, setIsMenuOpen, page }) => {
   }, [opacity]);
 
   const display = currentOpacity <= 0.4 ? "none" : "";
-console.log(currentOpacity)
+  console.log(currentOpacity)
+  
   const headerStyle = {
     opacity: screenWidth > 768 ? currentOpacity : 1,
     display: screenWidth > 768 ? display : "",

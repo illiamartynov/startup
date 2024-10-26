@@ -52,9 +52,9 @@ const Menu = (props) => {
                   onClick={() => {
                     toggleMenu();
                   }}
-                  href="/q&a"
+                  href="/aboutUs"
                 >
-                  o nas
+                  Zespół
                 </a>
               </li>
 
@@ -63,7 +63,7 @@ const Menu = (props) => {
                   onClick={() => {
                     toggleMenu();
                   }}
-                  href="/#gallery1"
+                  href="/gallery1"
                 >
                   galeria
                 </a>
@@ -73,7 +73,7 @@ const Menu = (props) => {
                   onClick={() => {
                     toggleMenu();
                   }}
-                  href="/#gallery1"
+                  href="/cennik"
                 >
                   cennik
                 </a>
@@ -97,9 +97,10 @@ const Menu = (props) => {
                   <b>Email:</b> dawid.tambor@vistager.com
                 </span>
                 <span>
-                  <b>Phone:</b> +48 505 788 569
+                  <b>Phone:</b> (+48) 505 788 569
                 </span>
               </div>
+              
             </div>
           </div>
         </div>

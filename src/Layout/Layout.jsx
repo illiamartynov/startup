@@ -3,6 +3,7 @@ import Header from "../Components/Header/Header";
 import CookiesWindow from "../Cookies/CookiesWindow";
 import Footer from "../Components/Footer/Footer";
 import { useTranslation } from 'react-i18next';
+import './Layout.css'; // Подключите стили
 
 const Layout = ({ children, page }) => {
   const [headerOpacity, setHeaderOpacity] = useState(1);
@@ -31,13 +32,9 @@ const Layout = ({ children, page }) => {
   }, []);
 
   return (
-    <div>
-      
-      
+    <div className="wrapper">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} opacity={headerOpacity} page={page}/>
-      <main>{children}</main>
-      {/* <h1>{t('welcome')}</h1>
-      <h1>{t('description')}</h1> */}
+      <main className="main-content">{children}</main>
       <Footer />
       <CookiesWindow />
     </div>

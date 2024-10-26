@@ -54,6 +54,6 @@
     font-size: calc(30 / 1200 * 100vmin);
     border-radius: calc(20 / 1200 * 100vmin);
     padding: calc(20 / 1200 * 100vmin);
-    margin-bottom: calc(60 / 1200 * 100vmin);
+    margin-bottom: calc(50 / 1200 * 100vmin);
   }
 }

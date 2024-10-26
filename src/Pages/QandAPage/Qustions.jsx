@@ -7,26 +7,29 @@ import imgExample from "../../Images/Icons/qaTestImage.png";
 const Questions = () => {
   const QUESTIONS = [
     {
-      title: "Dlaczego AI to przyszłość projektowania wnętrz?",
+      title: "Czym jest VISTAGER?",
       text: (
         <div className={styles.qaaa}>
           <div className={styles.qaContentWrapper}>
             <div>
-              <span style={{ fontWeight: "bold" }}>
-                Wydajność i kreatywność:{" "}
-              </span>
               <span>
-                Algorytmy sztucznej inteligencji upraszczają i usprawniają
-                proces projektowania, umożliwiając projektantom skupienie się w
-                większym stopniu na kreatywnych pomysłach i poszukiwaniach
-                najestetyczniejszych rozwiązań. Automatyzując powtarzalne
-                zadania, projektanci mogą przeznaczyć więcej czasu na
-                innowacyjne rozwiązania i spersonalizowany, unikalny projekt.
+                VISTAGER to narzędzie online, które pomaga agentom nieruchomości
+                przedstawiać prawdziwy potencjał prezentowanych wnętrz swoim
+                kupującym. Atrakcyjne wizualizacje pozwalają przyspieszać proces
+                sprzedaży i ułatwiać kupującym podjęcie decyzji.<p></p> Deweloperzy,
+                brokerzy, sprzedający, a nawet profesjonaliści w home staging
+                korzystają  z naszej technologii dla lepszego efektu. Zamiast
+                kupowania lub wypożyczania prawdziwych mebli i dekoracji do
+                pustych lub zaniedbanych pomieszczeń, mogą prezentować
+                atrakcyjne zdjęcia swoich wnętrz, wygenerowane przez sztuczną
+                inteligencję. Pomaga to wyróżnić ofertę na portalach
+                internetowych oraz zaangażować emocjonalnie kupujących podczas
+                oględzin na miejscu.
               </span>
             </div>
             <img src={imgExample} />
           </div>
-          <div className={styles.qaContentWrapper}>
+          {/* <div className={styles.qaContentWrapper}>
             <div>
               <span style={{ fontWeight: "bold" }}>
                 Wnioskowanie oparte na danych:{" "}
@@ -132,28 +135,30 @@ const Questions = () => {
               </span>
             </div>
             <img src={imgExample} />
-          </div>
+          </div> */}
         </div>
       ),
       image: imgExample,
     },
     {
-      title: "Korzyści z inwestycji w naszą firmę: ",
+      title: "Dlaczego powinienem wybrać VISTAGER zamiast usług home staging?",
       text: (
         <div className={styles.qaaa}>
           <div className={styles.qaContentWrapper}>
             <div>
-              <span style={{ fontWeight: "bold" }}>
-                Potencjał wzrostu wartości kapitału:
-              </span>
               <span>
-                W miarę rozwoju naszej firmy, wraz z czasem wartość Twojej inwestycji
-                wzrośnie.
+                Przede wszystkim to oszczędność czasu i kosztów. Profesjonalne
+                usługi home staging wraz z sesją fotograficzną to koszt od 1500
+                do 5000 zł i oczekiwanie przez kilka dni na realizację. Ten sam
+                efekt - szybszą i łatwiejszą sprzedaż nieruchomości - możemy
+                osiągnąć przy wykorzystaniu najtańszego pakietu VISTAGER. Nasza
+                wirtualna usługa jest wielokrotnie tańsza i trwa zaledwie kilka
+                minut. Zobacz pełne zestawienie wraz z cennikiem Tutaj.
               </span>
             </div>
             <img src={imgExample} />
           </div>
-          <div className={styles.qaContentWrapper}>
+          {/* <div className={styles.qaContentWrapper}>
             <div>
               <span style={{ fontWeight: "bold" }}>Dywidendy:</span>
               <span>
@@ -214,61 +219,61 @@ const Questions = () => {
               </span>
             </div>
             <img src={imgExample} />
-          </div>
+          </div> */}
         </div>
       ),
       image: imgExample,
     },
-    {
-      title: "Oferta inwestycyjna i zasady współpracy: ",
-      text: (
-        <div className={styles.qaaa}>
-          <div className={styles.qaContentWrapper}>
-            <div>
-              <span>
-                Podobnie jak w przypadku współpracy z partnerami - także w przypadku
-                inwestorów, do każdego zainteresowanego współpracą zawsze podchodzimy
-                indywidualnie. Wierzymy, że za każdym razem należy przeanalizować
-                możliwości i wspólne korzyści jakie płyną z potencjalnej współpracy.
-              </span>
-            </div>
-            <img src={imgExample} />
-          </div>
-          <div className={styles.qaContentWrapper}>
-            <div>
-              <span style={{ fontWeight: "bold" }}>
-                Możliwości inwestycyjne:
-              </span>
-              <span>
-                Oferujemy różne opcje inwestycyjne , które dostosujemy do Twojej
-                tolerancji ryzyka i celów.
-              </span>
-            </div>
-            <img src={imgExample} />
-          </div>
-          <div className={styles.qaContentWrapper}>
-            <div>
-              <span style={{ fontWeight: "bold" }}>Współpraca:</span>
-              <span>
-                Wierzymy w otwartą komunikację i współpracę z naszymi inwestorami.
-              </span>
-            </div>
-            <img src={imgExample} />
-          </div>
-          <div className={styles.qaContentWrapper}>
-            <div>
-              <span style={{ fontWeight: "bold" }}>Wspólna wizja:</span>
-              <span>
-                Nasze zasady są zgodne z celami zrównoważonego rozwoju, równości, pokoju,
-                bezpieczeństwa i celów humanitarnych.
-              </span>
-            </div>
-            <img src={imgExample} />
-          </div>
-        </div>
-      ),
-      image: imgExample,
-    },
+    // {
+    //   title: "Oferta inwestycyjna i zasady współpracy: ",
+    //   text: (
+    //     <div className={styles.qaaa}>
+    //       <div className={styles.qaContentWrapper}>
+    //         <div>
+    //           <span>
+    //             Podobnie jak w przypadku współpracy z partnerami - także w przypadku
+    //             inwestorów, do każdego zainteresowanego współpracą zawsze podchodzimy
+    //             indywidualnie. Wierzymy, że za każdym razem należy przeanalizować
+    //             możliwości i wspólne korzyści jakie płyną z potencjalnej współpracy.
+    //           </span>
+    //         </div>
+    //         <img src={imgExample} />
+    //       </div>
+    //       <div className={styles.qaContentWrapper}>
+    //         <div>
+    //           <span style={{ fontWeight: "bold" }}>
+    //             Możliwości inwestycyjne:
+    //           </span>
+    //           <span>
+    //             Oferujemy różne opcje inwestycyjne , które dostosujemy do Twojej
+    //             tolerancji ryzyka i celów.
+    //           </span>
+    //         </div>
+    //         <img src={imgExample} />
+    //       </div>
+    //       <div className={styles.qaContentWrapper}>
+    //         <div>
+    //           <span style={{ fontWeight: "bold" }}>Współpraca:</span>
+    //           <span>
+    //             Wierzymy w otwartą komunikację i współpracę z naszymi inwestorami.
+    //           </span>
+    //         </div>
+    //         <img src={imgExample} />
+    //       </div>
+    //       <div className={styles.qaContentWrapper}>
+    //         <div>
+    //           <span style={{ fontWeight: "bold" }}>Wspólna wizja:</span>
+    //           <span>
+    //             Nasze zasady są zgodne z celami zrównoważonego rozwoju, równości, pokoju,
+    //             bezpieczeństwa i celów humanitarnych.
+    //           </span>
+    //         </div>
+    //         <img src={imgExample} />
+    //       </div>
+    //     </div>
+    //   ),
+    //   image: imgExample,
+    // },
   ];
 
   return (

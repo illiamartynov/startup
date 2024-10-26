@@ -27,47 +27,61 @@ const Footer = () => {
             <span>
               E-mail:{" "}
               <a
-                href="mailto:biuro@vistager.com"
+                href="mailto:dawid.tambor@vistager.com"
                 className={styles.contactLink}
               >
-                biuro@vistager.com
+                dawid.tambor@vistager.com
               </a>
             </span>
             <span>
               Tel.{" "}
-              <a href="tel:+48123456789" className={styles.contactLink}>
-                (+48) 123 456 789
+              <a href="tel:+48505788569" className={styles.contactLink}>
+                (+48) 505 788 569
               </a>
             </span>
+            
+          </div>
+          <div className={styles.orgInf}>
+          <span>KRS: 0001112924</span>
+          <span>NIP: 7011211164</span>
+          <span>REGON: 528984312</span>
+
           </div>
           <div>
-            <span>Ul. Koszykowa 123</span>
-            <span>12-345 Warszawa</span>
+            <span>Hoża 86 / 410</span>
+            <span>00-682 Warszawa, Polska</span>
+
           </div>
+
         </div>
+        
         <div className={`${styles.kontaktWrapper} ${styles.skroty}`}>
           <h1>Skróty</h1>
           <div className={styles.kontaktWrapperInnerWrapper}>
-            <a>Glówna Strona</a>
-            <a>Wizja</a>
-            <a>Q&A</a>
-            <a>O nas</a>
+            <a href="./">Strona Główna</a>
+
+            <a href="./wizja">Wizja</a>
+            <a href="./aboutUs">Zespół</a>
             <a>Galeria</a>
-        </div>
+            <a>Cennik</a>
+
+            <a href="./q&a">Q&A</a>
+          </div>
         </div>
       </div>
       <div className={styles.footerImagesWrapper}>
-      <div className={styles.socialNets}>
-        {images.map((item, index) => (
-          <a key={index} href={item.link}>
-            <img src={item.img} alt={`Social icon ${index}`} />
-          </a>
-        ))}
-      </div>
+        <div className={styles.socialNets}>
+          {images.map((item, index) => (
+            <a key={index} href={item.link}>
+              <img src={item.img} alt={`Social icon ${index}`} />
+            </a>
+          ))}
+        </div>
+        <span className={styles.orgName}>INNOVATIVE DESIGN ENGINEERING ASSOCIATION SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</span>
 
-      <div className={styles.footerLogo}>
-        <img src={starsLogo} alt="Stars Logo" />
-      </div>
+        <div className={styles.footerLogo}>
+          <img src={starsLogo} alt="Stars Logo" />
+        </div>
       </div>
     </div>
   );

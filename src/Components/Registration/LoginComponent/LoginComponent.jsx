@@ -4,13 +4,13 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import google from "../../../Images/Icons/google.png";
 import apple from "../../../Images/Icons/apple.png";
-import Error from "../../ErrorMessage/Error"; 
-import config from '../../../../config';
+import Error from "../../ErrorMessage/Error";
+import config from "../../../../config";
 
 const LoginComponent = ({ show, closeMenu }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -107,7 +107,7 @@ const LoginComponent = ({ show, closeMenu }) => {
         value={password}
         onChange={handlePasswordChange}
       />
-      <button onClick={handleSubmit}>Sign in</button>
+      <button onClick={handleSubmit}>Zaloguj się</button>
       <div className={styles.socialNets}>
         <a href={`${config.baseUrlGoogle}/oauth2/authorization/google`}>
           <img alt="google registration" src={google} />

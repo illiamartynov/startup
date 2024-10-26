@@ -48,7 +48,10 @@
   height: calc(45 / 400 * 100vmin);
   justify-content: space-between;
 }
-
+.innerWrapperKontacts .orgInf{
+  margin-bottom: calc(30 / 400 * 100vmin);
+  height: 100%;
+}
 .kontaktWrapper div:first-of-type {
   margin-bottom: calc(30 / 400 * 100vmin);
 }
@@ -72,16 +75,27 @@ height: calc(30 / 400 * 100vmin);
 
 .socialNets a {
   margin: 0 calc(10 / 400 * 100vmin); 
+  text-decoration: none;
+    color: inherit;
+}
+.socialNets span a {
+  text-decoration: none;
+    color: inherit;
 }
 .socialNets a:first-child {
   margin-left: 0;
+  text-decoration: none;
+    color: inherit;
 }
 
 .socialNets img {
   width: calc(35 / 400 * 100vmin); 
   height: calc(35 / 400 * 100vmin); 
 }
-
+.orgName{
+  margin-bottom: 10%;
+  display: block;
+}
 @media screen and (min-width: 1300px) {
   .starsLogo {
     width: calc(320 / 1200 * 100vmin);
@@ -123,14 +137,16 @@ font-family: var(--fontBold);
     justify-content: space-between;
     flex-direction: row;
     max-width: calc(1800 / 1200 * 100vmin);
+    margin-bottom: calc(70 / 1200 * 100vmin);
   }
 
   .kontaktWrapper div:first-of-type {
-    margin-bottom: calc(50 / 1200 * 100vmin);
+    margin-bottom: calc(40 / 1200 * 100vmin);
   }
   .contactLink {
     color: inherit;
     text-decoration: none;
+    
   }
   
   .contactLink:hover,
@@ -142,9 +158,12 @@ font-family: var(--fontBold);
   }
 
   .skroty div {
-    height: calc(180 / 1200 * 100vmin);
+    height: calc(250 / 1200 * 100vmin);
   }
-
+  .innerWrapperKontacts .orgInf{
+    margin-bottom: calc(40 / 1200 * 100vmin);
+    height: calc(90 / 1200 * 100vmin);
+  }
   .skroty h1 {
     margin-bottom: calc(30 / 1200 * 100vmin);
   }
@@ -155,7 +174,7 @@ font-family: var(--fontBold);
   }
 
   .footerLogo img {
-    width: calc(280 / 1200 * 100vmin);
+    width: calc(300 / 1200 * 100vmin);
     height: calc(50 / 1200 * 100vmin);
   }
   .footerImagesWrapper{
@@ -164,6 +183,7 @@ font-family: var(--fontBold);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
   }
   .socialNets {
     margin-bottom: calc(0 / 400 * 100vmin);
@@ -171,5 +191,10 @@ font-family: var(--fontBold);
   .socialNets img {
     width: calc(50 / 1200 * 100vmin); 
     height: calc(50 / 1200 * 100vmin); 
+  }
+
+  .orgName{
+    margin-left: 10%;
+    margin-bottom: 0;
   }
 }

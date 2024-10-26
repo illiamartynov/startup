@@ -1,40 +1,94 @@
+.wrapper {
+  background-color: #efefef;
+  padding: calc(30 / 400 * 100vmin) calc(40 / 400 * 100vmin);
+}
 .wrapper h1 {
   padding: 0;
   font-family: "Futura Medium";
   font-size: calc(25 / 400 * 100vmin);
   margin-bottom: calc(20 / 400 * 100vmin);
 }
-
+.wrapper div {
+  margin-bottom: calc(30 / 400 * 100vmin);
+}
+.wrapper span {
+  font-size: calc(20 / 400 * 100vmin);
+  font-weight: 700;
+  line-height: calc(22 / 400 * 100vmin);
+}
+.wrapper p {
+  font-size: calc(20 / 400 * 100vmin);
+  font-weight: 500;
+  line-height: calc(25 / 400 * 100vmin);
+}
 .wrapper ol {
   margin: 0;
   list-style: none;
   padding: 0;
 }
 
+.watchVideo {
+  box-shadow: 0px calc(1 / 400 * 100vmin) calc(2 / 400 * 100vmin) 0px #0000001a,
+    0px calc(4 / 400 * 100vmin) calc(4 / 400 * 100vmin) 0px #00000017,
+    0px calc(9 / 400 * 100vmin) calc(6 / 400 * 100vmin) 0px #0000000d,
+    0px calc(17 / 400 * 100vmin) calc(7 / 400 * 100vmin) 0px #00000003,
+    0px calc(26 / 400 * 100vmin) calc(7 / 400 * 100vmin) 0px #00000000;
+
+  background-color: #d4b147;
+  width: 100%;
+  height: calc(50 / 400 * 100vmin);
+  border-radius: calc(12 / 400 * 100vmin);
+  outline: none;
+  border-color: transparent;
+  font-size: calc(24 / 400 * 100vmin);
+  font-weight: 700;
+  line-height: calc(32 / 400 * 100vmin);
+  text-align: left;
+  color: white;
+  text-align: center;
+  margin-bottom: calc(20 / 400 * 100vmin);
+}
+
 .wrapper li {
   margin: 0;
-  font-size: calc(16 / 400 * 100vmin);
+  font-size: calc(18 / 400 * 100vmin);
   line-height: calc(25 / 400 * 100vmin);
 }
 
 @media screen and (min-width: 1300px) {
   .wrapper {
-    text-align: right;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+  }
+  .wrapper div:nth-child(2){
+    width: 50%;
+    display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
   .wrapper ol {
     margin: 0;
     list-style: none;
     padding: 0;
-    width: 90%;
-    text-align: right;
+    width: 100%;
   }
   .wrapper li {
     margin: 0;
     font-size: calc(45 / 1200 * 100vmin);
     line-height: calc(60 / 1200 * 100vmin);
+  }
+  .watchVideo {
+    font-size: calc(50 / 1200 * 100vmin);
+    height: calc(100 / 1200 * 100vmin);
+    width: 50%;
+  }
+  .wrapper span {
+    font-size: calc(40 / 1200 * 100vmin);
+    line-height: calc(44 / 1200 * 100vmin);
+  }
+  .wrapper p {
+    font-size: calc(40 / 1200 * 100vmin);
+    line-height: calc(50 / 1200 * 100vmin);
   }
 }

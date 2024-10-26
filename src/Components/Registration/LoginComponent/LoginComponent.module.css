@@ -96,7 +96,7 @@
     font-size: calc(25 / 1200 * 100vmin);
     border-radius: calc(20 / 1200 * 100vmin);
     padding: calc(20 / 1200 * 100vmin);
-    margin-bottom: calc(60 / 1200 * 100vmin);
+    margin-bottom: calc(50 / 1200 * 100vmin);
     border: calc(1 / 1200 * 100vmin) solid black;
   }
   .registInputs button {
