@@ -2,6 +2,14 @@ import React from "react";
 import styles from "../Steps.module.css";
 
 const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
+  const handleDownload = () => {
+    if (finalImage) {
+      const link = document.createElement("a");
+      link.href = finalImage;
+      link.download = "final_image.jpg";
+      link.click();
+    }
+  };
   return (
     <div className={styles.wrapper}>
       <h2>Your project:</h2>
@@ -14,7 +22,12 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
       ) : (
         <button className={styles.savebtn} onClick={onFinish}>WYPRÓBUJ</button>
       )}
-      {finalImage && <img src={finalImage} alt="Final" />}
+      {finalImage && (
+        <>
+          <img className={styles.finalPhoto} src={finalImage} alt="Final" />
+          <button className={styles.downloadbtn} onClick={handleDownload}>Download</button>
+        </>
+      )}
     </div>
   );
 };
