@@ -64,16 +64,18 @@ const RenderingZone = () => {
     const url = "/ai/get_insane_image_1337";
     const cleanedPhoto = uploadedPhoto.replace(/^data:image\/\w+;base64,/, "");
     const bearerToken = Cookies.get("bearer_token");
-if (!bearerToken) {
-  console.error("Bearer token отсутствует. Убедитесь, что он установлен.");
-  setError("Ошибка авторизации: токен отсутствует");
-  setShowLoadingModal(false); 
-  return;
-}
-console.log("Bearer token:", bearerToken); // Проверка значения токена
-console.log("Запрос на URL:", url);
-console.log("Заголовки запроса:", { Authorization: `Bearer ${bearerToken}` });
-console.log("Тело запроса:", data);
+    if (!bearerToken) {
+      console.error("Bearer token отсутствует. Убедитесь, что он установлен.");
+      setError("Ошибка авторизации: токен отсутствует");
+      setShowLoadingModal(false);
+      return;
+    }
+    console.log("Bearer token:", bearerToken); // Проверка значения токена
+    console.log("Запрос на URL:", url);
+    console.log("Заголовки запроса:", {
+      Authorization: `Bearer ${bearerToken}`,
+    });
+    console.log("Тело запроса:", data);
 
     const data = {
       room_choice: selectedRoom,
@@ -82,11 +84,13 @@ console.log("Тело запроса:", data);
     };
 
     try {
+      console.log("Отправка запроса...");
       const response = await axios.post(url, data, {
         headers: {
           Authorization: `Bearer ${bearerToken}`,
         },
       });
+      console.log("Ответ получен:", response);
       const outputImage = response.data.output_image;
       setFinalImage(`data:image/png;base64,${outputImage}`);
       setCurrentStep(4); // Переход на финальный шаг
@@ -107,7 +111,9 @@ console.log("Тело запроса:", data);
       <div className={styles.contentWrapper}>
         {/* Рендеринг шагов в зависимости от currentStep */}
         {currentStep === 1 && <PhotoUploadStep onUpload={handlePhotoUpload} />}
-        {currentStep === 2 && <RoomStep onSelect={handleRoomSelect} uploadedPhoto={uploadedPhoto} />}
+        {currentStep === 2 && (
+          <RoomStep onSelect={handleRoomSelect} uploadedPhoto={uploadedPhoto} />
+        )}
         {currentStep === 3 && (
           <BudgetStyleStep
             onSelect={handleBudgetStyleSelect}
