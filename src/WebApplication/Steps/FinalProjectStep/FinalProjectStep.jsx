@@ -14,26 +14,31 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
   return (
     <div className={styles.finalProjectWrapper}>
       {/* Отображение загруженного фото пользователя */}
+      
+
+      {/* Блок с кнопками */}
+      <div className={styles.buttonContainer}>
+      {photo && (
+        <div className={styles.uploadedPhotoWrapper}>
+          <img src={photo} alt="Uploaded" className={styles.uploadedPhoto} />
+        </div>
+      )}
       {finalImage && (
         <div className={styles.finalImageWrapper}>
           <img src={finalImage} alt="Final" className={styles.finalImage} />
         </div>
       )}
-
-      {/* Блок с кнопками */}
-      <div className={styles.buttonContainer}>
-
-        <button className={styles.newVisualizationButton}>
+        {/* <button className={styles.newVisualizationButton}>
           Nowa wizualizacja
         </button>
         <button className={styles.uploadNewPhotoButton}>
           Wgraj nowe zdjęcie
-        </button>
+        </button> */}
         <button className={styles.saveButton} onClick={handleDownload}>
           Zapisz
         </button>
         <button className={styles.shortOfferButton} onClick={onFinish}>
-          Utwórz skróconą ofertę
+          Let's go
         </button>
       </div>
 
