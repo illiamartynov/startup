@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../FinalProjectStep/FinalProjectStep.module.css";
 
-const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
+const FinalProjectStep = ({ room,budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
   const handleDownload = () => {
     if (finalImage) {
       const link = document.createElement("a");
@@ -29,10 +29,10 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
         <button className={styles.uploadNewPhotoButton}>
           Wgraj nowe zdjęcie
         </button>
-        <button className={styles.saveButton} onClick={handleDownload}>
+        <button className={styles.saveButton} onClick={onFinish}>
           Zapisz
         </button>
-        <button className={styles.shortOfferButton}>
+        <button className={styles.shortOfferButton} onClick={handleFinalStep}>
           Utwórz skróconą ofertę
         </button>
       </div>
