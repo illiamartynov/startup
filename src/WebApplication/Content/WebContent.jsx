@@ -7,7 +7,7 @@ const WebContent = () => {
   
   return (
     <div className={styles.background}>
-      <Header/>
+      {/* <Header/> */}
       <RenderingZone/>
     </div>
   );

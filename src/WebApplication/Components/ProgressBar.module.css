@@ -1,0 +1,45 @@
+.progressBarWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: calc(20 / 400 * 100vmin);
+  }
+  
+  .progressBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: calc(600 / 400 * 100vmin);
+    position: relative;
+  }
+  
+  .circle {
+    position: relative;
+    width: calc(24 / 400 * 100vmin);
+    height: calc(24 / 400 * 100vmin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: calc(4 / 400 * 100vmin);
+    background-color: #e0e0e0;
+    position: relative;
+    z-index: 0;
+    margin-left: calc(-2 / 400 * 100vmin); /* Немного смещаем, чтобы линия начиналась ближе к кругу */
+    margin-right: calc(-2 / 400 * 100vmin); /* Немного смещаем, чтобы линия заканчивалась ближе к кругу */
+  }
+  
+  .filledLine {
+    background: linear-gradient(to right, #D3B146, #D3B146);
+  }
+  

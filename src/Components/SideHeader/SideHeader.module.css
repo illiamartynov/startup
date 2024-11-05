@@ -6,7 +6,7 @@
   transform: translateY(-50%);
   width: 0;
     height: calc(150 / 400 * 100vmin); /* bilo 185 dla 4 iconok */
-  background-color: #DFC476;
+  background-color: #D3B146;
   z-index: 4;
   border-top-right-radius: calc(20 / 400 * 100vmin);
   border-bottom-right-radius: calc(20 / 400 * 100vmin);

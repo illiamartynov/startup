@@ -1,0 +1,75 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(56, 56, 56, 0.5); /* Цвет с прозрачностью */
+    backdrop-filter: blur(calc(8.1 / 400 * 100vmin)); /* Размытие фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+  .modal {
+    background-color: #fff;
+    padding: calc(20 / 400 * 100vmin);
+    border-radius: calc(8 / 400 * 100vmin);
+    max-width: calc(400 / 400 * 100vmin);
+    width: 100%;
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: calc(10 / 400 * 100vmin);
+    right: calc(10 / 400 * 100vmin);
+    background: none;
+    border: none;
+    font-size: calc(24 / 400 * 100vmin);
+    cursor: pointer;
+  }
+  
+  .modalTitle {
+    font-size:calc(18 / 400 * 100vmin);
+    font-weight: bold;
+    color: #333;
+    margin-bottom: calc(10 / 400 * 100vmin);
+  }
+  
+  .modalMessage {
+    font-size: calc(14 / 400 * 100vmin);
+    color: #666;
+    margin-bottom: calc(20 / 400 * 100vmin);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(10 / 400 * 100vmin);
+  }
+  
+  .confirmButton {
+    background-color: #D3B146;
+    color: #fff;
+    border: none;
+    padding: calc(10 / 400 * 100vmin);
+    border-radius: calc(5 / 400 * 100vmin);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    background-color: #fff;
+    color: #D3B146;
+    border: calc(1 / 400 * 100vmin) solid #D3B146;
+    padding: calc(10 / 400 * 100vmin);
+    border-radius: calc(5 / 400 * 100vmin);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

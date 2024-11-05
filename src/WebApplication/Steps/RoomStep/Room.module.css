@@ -1,0 +1,82 @@
+.roomStepWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: calc(20 / 400 * 100vmin);
+    background-color: #f9f9f9;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}
+
+.uploadedPhotoWrapper {
+    width: 90%;
+    max-width: calc(400 / 400 * 100vmin);
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.uploadedPhoto {
+    width: 100%;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}
+
+.roomTitle {
+    font-size: calc(18 / 400 * 100vmin);
+    color: #D3B146;
+    font-weight: bold;
+    text-align: center;
+    margin: calc(10 / 400 * 100vmin) 0;
+    position: relative;
+}
+
+.roomTitle::after {
+    content: "";
+    display: block;
+    width: calc(80 / 400 * 100vmin);
+    height: calc(2 / 400 * 100vmin);
+    background-color: #D3B146;
+    margin: calc(10 / 400 * 100vmin) auto 0;
+}
+
+.elementsWrapperRoom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(15 / 400 * 100vmin);
+    padding: calc(10 / 400 * 100vmin);
+    border-radius: calc(8 / 400 * 100vmin);
+    background-color: #fff;
+    justify-items: center;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.roomImage {
+    width: calc(120 / 400 * 100vmin); /* Увеличим размер */
+    height: calc(120 / 400 * 100vmin);
+    border-radius: calc(8 / 400 * 100vmin);
+    margin-bottom: calc(8 / 400 * 100vmin);
+    transition: transform 0.2s ease;
+}
+
+.roomImage:hover {
+    transform: scale(1.05);
+}
+
+.elementText {
+    font-size: calc(14 / 400 * 100vmin);
+    font-weight: bold;
+    color: #D3B146;
+}
+
+.selected .roomImage {
+    /* border: 2px solid #D3B146; */
+}

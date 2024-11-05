@@ -1,131 +1,215 @@
 .wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  cursor: pointer;
+  align-items: center;
+  padding: calc(20 / 400 * 100vmin);
+  margin-top: calc(100 / 400 * 100vmin);
 }
 
-.elementsWrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: calc((20 / 430) * 100vmin); 
-  text-transform: capitalize;
-}
-.imageInput {
-  opacity: 0;
+.iconWrapper {
+  margin-bottom: calc(60 / 400 * 100vmin);
 }
 
-.finalPhoto {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+.addPhotoIcon {
+  width: calc(90 / 400 * 100vmin);
+  height: calc(90 / 400 * 100vmin);
 }
 
-.savebtn{
-  font-size: calc(18 / 400 * 100vmin);
-  border-color: transparent;
-  background-color: #dfc476;
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: calc(10 / 400 * 100vmin);
+  width: 100%;
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D3B146;
+  padding: calc(15 / 400 * 100vmin) calc(10 / 400 * 100vmin);
+  border: none;
   border-radius: calc(10 / 400 * 100vmin);
-  color: white;
+  font-size: calc(16 / 400 * 100vmin);
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.5s ease;
-  margin-bottom: calc(30 / 400 * 100vmin);
-  height: calc(50 / 400 * 100vmin);
-  font-weight: 700;
-  letter-spacing: calc(0.8 / 400 * 100vmin);
-  margin-top: calc(20 / 400 * 100vmin);
-}
-.inputInnerWrapper {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: calc((20 / 430) * 100vmin);
-  width: calc((300 / 430) * 100vmin);
-  height: calc((300 / 430) * 100vmin);
-}
-.imageInput {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.inputInnerWrapper img {
-  width: 100%;
-  height: 100%;
+  text-align: center;
 }
 
-.inputWrapper {
+.optionButton {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  height: calc((450 / 430) * 100vmin);
-  margin-top: calc((20 / 430) * 100vmin);
-  width: calc((200 / 430) * 100vmin);
-}
-.inputWrapper button {
-  font-size: calc(20 / 400 * 100vmin);
-  border-color: transparent;
-  background-color: #dfc476;
-  border-radius: calc(5 / 400 * 100vmin);
-  color: white;
+  justify-content: center;
+  background-color: #fff;
+  border: calc(2 / 400 * 100vmin) solid #D3B146;
+  padding: calc(15 / 400 * 100vmin) calc(10 / 400 * 100vmin);
+  border-radius: calc(10 / 400 * 100vmin);
+  font-size: calc(16 / 400 * 100vmin);
+  color: #D3B146;
   cursor: pointer;
-  transition: background-color 0.5s ease;
-  margin-bottom: calc(30 / 400 * 100vmin);
-  height: calc(50 / 400 * 100vmin);
-  font-weight: 700;
-  letter-spacing: calc(0.8 / 400 * 100vmin);
+  text-align: center;
+}
+
+.buttonIcon {
+  width: calc(20 / 400 * 100vmin);
+  height: calc(20 / 400 * 100vmin);
+  margin-right: calc(8 / 400 * 100vmin);
+}
+
+.progressWrapper {
+  margin-top: calc(20 / 400 * 100vmin);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
 }
 
-.imagePreview {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.circle {
+  width: calc(12 / 400 * 100vmin);
+  height: calc(12 / 400 * 100vmin);
+  border-radius: 50%;
+  background-color: #ccc;
 }
 
-.imagePreview img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+.circle.active {
+  background-color: #D3B146;
 }
-
 @media screen and (min-width: 1300px) {
-  .finalPhoto {
-    width: 100%;
-    max-width: 100%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
   }
-  .wrapper h2 {
-    font-size: calc((45 / 1200) * 100vmin);
-  }
-  .elementsWrapper {
-    grid-template-columns: repeat(2, 1fr);
 
-    gap: calc((60 / 1200) * 100vmin); 
-    margin-bottom:  calc((50 / 1200) * 100vmin);
+  .iconWrapper {
+    margin-bottom: 30px;
   }
-  .inputInnerWrapper {
-    border-radius: calc((20 / 1200) * 100vmin);
-    width: calc((600 / 1200) * 100vmin);
-    height: calc((600 / 1200) * 100vmin);
+
+  .addPhotoIcon {
+    width: 120px;
+    height: 120px;
   }
-  .inputWrapper {
-    height: calc((900 / 1200) * 100vmin);
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 80%; /* Сделаем шире, чтобы кнопки выглядели более крупными */
   }
-  .inputWrapper button {
-    font-size: calc(50 / 1200 * 100vmin);
-   
-    border-radius: calc(5 / 400 * 100vmin);
-    margin-bottom: calc(30 / 400 * 100vmin);
-    height: calc(100 / 1200 * 100vmin);
-    letter-spacing: calc(0.8 / 400 * 100vmin);
+
+  .uploadButton,
+  .optionButton {
+    width: 100%; /* Ширина кнопок по всей ширине контейнера */
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  .uploadButton {
+    background-color: #D3B146;
+    color: #fff;
+    border: none;
+  }
+
+  .optionButton {
+    border: 2px solid #D3B146;
+    background-color: #fff;
+    color: #D3B146;
+  }
+
+  .buttonIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .iconWrapper {
+    margin-bottom: 30px;
+  }
+
+  .addPhotoIcon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .uploadButton, .optionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .uploadButton {
+    background-color: #D3B146;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .optionButton {
+    background-color: #fff;
+    color: #D3B146;
+    border: 2px solid #D3B146;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .buttonIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .progressWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .progressBar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+  }
+
+  .circle.active {
+    background-color: #D3B146;
   }
 }

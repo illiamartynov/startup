@@ -1,0 +1,74 @@
+.finalProjectWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: calc(20 / 400 * 100vmin);
+    background-color: #f9f9f9;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(10 / 400 * 100vmin);
+    margin-top: calc(20 / 400 * 100vmin);
+    width: 100%;
+    max-width: calc(400 / 400 * 100vmin);
+}
+
+.generateButton {
+    background-color: #D3B146;
+    color: #fff;
+    border: none;
+    border-radius: calc(8 / 400 * 100vmin);
+    padding: calc(10 / 400 * 100vmin);
+    font-size: calc(16 / 400 * 100vmin);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newVisualizationButton,
+.uploadNewPhotoButton,
+.saveButton {
+    background-color: #D3B146;
+    color: #fff;
+    border: none;
+    border-radius: calc(8 / 400 * 100vmin);
+    padding: calc(10 / 400 * 100vmin);
+    font-size: calc(16 / 400 * 100vmin);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shortOfferButton {
+    background-color: transparent;
+    color: #D3B146;
+    border: calc(1 / 400 * 100vmin) solid #D3B146;
+    border-radius: calc(8 / 400 * 100vmin);
+    padding: calc(10 / 400 * 100vmin);
+    font-size: calc(16 / 400 * 100vmin);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadedPhotoWrapper {
+    width: 90%; /* Слегка уменьшим изображение для более симметричного вида */
+    max-width: calc(400 / 400 * 100vmin);
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.uploadedPhoto {
+    width: 100%;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}

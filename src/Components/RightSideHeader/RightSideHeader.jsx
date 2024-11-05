@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 
 const RightSideHeader = ({ isTop, isMenuOpen, setIsMenuOpen }) => {
   const [isMenuRotated, setIsMenuRotated] = useState(false);
-  const [initial, setInitial] = useState("");
+  const [initial, setInitial] = useState("1");
   const { i18n } = useTranslation();
 
   const changeLanguage = () => {

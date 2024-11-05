@@ -1,22 +1,68 @@
-.outerWrapper{
-    margin-top: calc((50 / 430 ) * 100vmin);
+.outerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(20 / 400 * 100vmin);
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: calc(400 / 400 * 100vmin); /* можно задать максимальную ширину для центрирования */
+}
+
+.progressWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: calc(20 / 400 * 100vmin); /* отступ сверху для прогресс-бара */
+}
+
+.progressBar {
+    display: flex;
+    justify-content: space-between;
+    width: 60%; /* Уменьшаем ширину для центрирования точек */
+    max-width: calc(250 / 400 * 100vmin); /* Ограничиваем максимальную ширину */
+}
+
+.circle {
+    width: calc(12 / 400 * 100vmin);
+    height: calc(12 / 400 * 100vmin);
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.circle.active {
+    background-color: #D3B146;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: calc(10 / 400 * 100vmin);
+    width: 100%; /* Делаем кнопки по ширине контента */
+}
+
+.uploadButton,
+.optionButton {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.outerWrapper button img{
-    width: 50px;
-    height: 50px;
-}
-
-.outerWrapper .backBtn{
-    background-color: transparent;
-    outline: none;
-    border-color: transparent;
+    padding: calc(15 / 400 * 100vmin) calc(10 / 400 * 100vmin);
+    border-radius: calc(8 / 400 * 100vmin);
+    font-size: calc(16 / 400 * 100vmin);
 }
 
-@media screen and (min-width: 1300px) {
-    .outerWrapper{
-        margin-top: calc((50 / 1200 ) * 100vmin);
-    }
+.uploadButton {
+    background-color: #D3B146;
+    color: #fff;
+}
+
+.optionButton {
+    background-color: #fff;
+    border: calc(1 / 400 * 100vmin) solid #D3B146;
+    color: #D3B146;
 }

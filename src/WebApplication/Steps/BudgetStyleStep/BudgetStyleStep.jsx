@@ -1,8 +1,7 @@
 import React from "react";
 import Element from "../../Components/Element/Element";
-import styles from "../Steps.module.css";
+import styles from "../BudgetStyleStep/BudgetStyleStep.module.css";
 
-// Импортируем изображения стилей для каждой комнаты
 import contemporaryLivingRoom from "../../../Images/webApp/styles/livingRooms/Contemporary.jpg";
 import minimalisticLivingRoom from "../../../Images/webApp/styles/livingRooms/Minimalistic.jpg";
 import scandinavianLivingRoom from "../../../Images/webApp/styles/livingRooms/Scandinavian.jpg";
@@ -15,43 +14,55 @@ import contemporaryKitchen from "../../../Images/webApp/styles/kitchens/Contempo
 import minimalisticKitchen from "../../../Images/webApp/styles/kitchens/Minimalistic.jpg";
 import scandinavianKitchen from "../../../Images/webApp/styles/kitchens/Scandinavian.jpg";
 
-const BudgetStyleStep = ({ onSelect, selectedRoom }) => {
+const BudgetStyleStep = ({ onSelect, selectedRoom, uploadedPhoto }) => {
   let options = [];
 
-  if (selectedRoom === "living room") {
+  if (selectedRoom === "SYPIALNIA") {
     options = [
-      { name: "Contemporary, High-End", image: contemporaryLivingRoom },
-      { name: "Minimalistic, Average", image: minimalisticLivingRoom },
-      { name: "Scandinavian, Moderate", image: scandinavianLivingRoom },
+      { name: "Ekonomiczny", image: contemporaryLivingRoom, priceRange: "0 zł - 2000 zł/m²" },
+      { name: "Standard", image: minimalisticLivingRoom, priceRange: "2000 zł - 4000 zł/m²" },
+      { name: "Gold", image: scandinavianLivingRoom, priceRange: "4000 zł - 6000 zł/m²" },
+      { name: "Premium", image: scandinavianLivingRoom, priceRange: "od 6000 zł/m²" },
     ];
-  } else if (selectedRoom === "bedroom") {
+  } else if (selectedRoom === "SALON") {
     options = [
-      { name: "Contemporary, High-End", image: contemporaryBedroom },
-      { name: "Minimalistic, Average", image: minimalisticBedroom },
-      { name: "Scandinavian, Moderate", image: scandinavianBedroom },
+      { name: "Ekonomiczny", image: contemporaryBedroom, priceRange: "0 zł - 2000 zł/m²" },
+      { name: "Standard", image: minimalisticBedroom, priceRange: "2000 zł - 4000 zł/m²" },
+      { name: "Gold", image: scandinavianBedroom, priceRange: "4000 zł - 6000 zł/m²" },
+      { name: "Premium", image: scandinavianBedroom, priceRange: "od 6000 zł/m²" },
     ];
-  } else if (selectedRoom === "kitchen") {
+  } else if (selectedRoom === "KUCHNIA") {
     options = [
-      { name: "Contemporary, High-End", image: contemporaryKitchen },
-      { name: "Minimalistic, Average", image: minimalisticKitchen },
-      { name: "Scandinavian, Moderate", image: scandinavianKitchen },
+      { name: "Ekonomiczny", image: contemporaryKitchen, priceRange: "0 zł - 2000 zł/m²" },
+      { name: "Standard", image: minimalisticKitchen, priceRange: "2000 zł - 4000 zł/m²" },
+      { name: "Gold", image: scandinavianKitchen, priceRange: "4000 zł - 6000 zł/m²" },
+      { name: "Premium", image: scandinavianKitchen, priceRange: "od 6000 zł/m²" },
     ];
   }
 
   return (
-    <div className={styles.wrapper}>
-      <h2>Choose your budget and style:</h2>
-      <div className={styles.elementsWrapper}>
-        {options.map((option, index) => (
-          <Element
-            key={index}
-            image={option.image}
-            text={option.name}
-            onClick={() => onSelect(option.name)}
-          >
-            {option.name}
-          </Element>
-        ))}
+    <div className={styles.budgetStepWrapper}>
+      {/* Отображение загруженного фото */}
+      {uploadedPhoto && (
+        <div className={styles.uploadedPhotoWrapper}>
+          <img src={uploadedPhoto} alt="Uploaded" className={styles.uploadedPhoto} />
+        </div>
+      )}
+
+      <h2 className={styles.budgetTitle}>Wybierz budżetowy styl</h2>
+      <div className={styles.budgetOptionsWrapper}>
+        {/* <button className={styles.arrowButton}>{"<"}</button> */}
+        <div className={styles.elementsWrapper}>
+          {options.map((option, index) => (
+            <Element
+              key={index}
+              image={option.image}
+              text={`${option.name} ${option.priceRange}`}
+              onClick={() => onSelect(option.name)}
+            />
+          ))}
+        </div>
+        {/* <button className={styles.arrowButton}>{">"}</button> */}
       </div>
     </div>
   );

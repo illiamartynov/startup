@@ -1,0 +1,65 @@
+.budgetStepWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: calc(20 / 400 * 100vmin);
+}
+
+.uploadedPhotoWrapper {
+    width: 90%;
+    max-width: calc(400 / 400 * 100vmin);
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(20 / 400 * 100vmin);
+}
+
+.uploadedPhoto {
+    width: 100%;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}
+
+.budgetTitle {
+    font-size: calc(18 / 400 * 100vmin);
+    color: #D3B146;
+    font-weight: bold;
+    text-align: center;
+    margin: calc(10 / 400 * 100vmin) 0;
+    position: relative;
+}
+
+.budgetTitle::after {
+    content: "";
+    display: block;
+    width: calc(100 / 400 * 100vmin);
+    height: calc(2 / 400 * 100vmin);
+    background-color: #D3B146;
+    margin: calc(10 / 400 * 100vmin) auto 0;
+}
+
+.budgetOptionsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(10 / 400 * 100vmin);
+}
+
+.elementsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(15 / 400 * 100vmin);
+    padding: calc(10 / 400 * 100vmin);
+    background-color: #fff;
+    border-radius: calc(10 / 400 * 100vmin);
+    box-shadow: 0 calc(4 / 400 * 100vmin) calc(8 / 400 * 100vmin) rgba(0, 0, 0, 0.1);
+}
+
+.arrowButton {
+    background: none;
+    border: none;
+    color: #D3B146;
+    font-size: calc(24 / 400 * 100vmin);
+    cursor: pointer;
+    padding: 0 calc(15 / 400 * 100vmin);
+}

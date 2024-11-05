@@ -1,0 +1,63 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(56, 56, 56, 0.5); /* Цвет с прозрачностью */
+    backdrop-filter: blur(calc(8.1 / 400 * 100vmin)); /* Размытие фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.text {
+    font-size: calc(18 / 400 * 100vmin);
+    color: white;
+    margin-bottom: calc(20 / 400 * 100vmin);
+    font-weight: bold;
+    text-align: center;
+}
+
+.circularWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: relative;
+    width: calc(80 / 400 * 100vmin);
+    height: calc(80 / 400 * 100vmin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: calc(36 / 400 * 100vmin);
+    height: calc(36 / 400 * 100vmin);
+    position: absolute;
+    z-index: 1;
+}
+
+.progressRing {
+    position: absolute;
+    width: calc(80 / 400 * 100vmin);
+    height: calc(80 / 400 * 100vmin);
+    border-radius: 50%;
+    border: calc(8 / 400 * 100vmin) solid transparent;
+    border-top-color: #dfc476;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

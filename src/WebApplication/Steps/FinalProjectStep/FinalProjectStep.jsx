@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Steps.module.css";
+import styles from "../FinalProjectStep/FinalProjectStep.module.css";
 
 const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
   const handleDownload = () => {
@@ -10,24 +10,39 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
       link.click();
     }
   };
+
   return (
-    <div className={styles.wrapper}>
-      <h2>Your project:</h2>
-      <p>Room: {room}</p>
-      <p>Budget and style: {budgetStyle}</p>
-      <img className={styles.finalPhoto} src={photo} alt="Uploaded" />
-      {error && <p className={styles.error}>{error}</p>}
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <button className={styles.savebtn} onClick={onFinish}>WYPRÓBUJ</button>
-      )}
+    <div className={styles.finalProjectWrapper}>
+      {/* Отображение загруженного фото пользователя */}
       {finalImage && (
-        <>
-          <img className={styles.finalPhoto} src={finalImage} alt="Final" />
-          <button className={styles.downloadbtn} onClick={handleDownload}>Download</button>
-        </>
+        <div className={styles.finalImageWrapper}>
+          <img src={finalImage} alt="Final" className={styles.finalImage} />
+        </div>
       )}
+
+      {/* Блок с кнопками */}
+      <div className={styles.buttonContainer}>
+
+        <button className={styles.newVisualizationButton}>
+          Nowa wizualizacja
+        </button>
+        <button className={styles.uploadNewPhotoButton}>
+          Wgraj nowe zdjęcie
+        </button>
+        <button className={styles.saveButton} onClick={handleDownload}>
+          Zapisz
+        </button>
+        <button className={styles.shortOfferButton}>
+          Utwórz skróconą ofertę
+        </button>
+      </div>
+
+      {/* Показ финального изображения, если оно доступно */}
+      
+
+      {/* Показ ошибки и загрузки */}
+      {error && <p className={styles.error}>{error}</p>}
+      {isLoading && <p className={styles.loading}>Loading...</p>}
     </div>
   );
 };
