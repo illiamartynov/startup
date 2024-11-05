@@ -60,32 +60,34 @@ const RenderingZone = () => {
     setShowConfirmationModal(false); // Закрыть окно подтверждения
     setShowLoadingModal(true); // Показать окно загрузки
     setError(null);
-
+  
     const url = "/ai/get_insane_image_1337";
     const cleanedPhoto = uploadedPhoto.replace(/^data:image\/\w+;base64,/, "");
     const bearerToken = Cookies.get("bearer_token");
+    
     if (!bearerToken) {
       console.error("Bearer token отсутствует. Убедитесь, что он установлен.");
       setError("Ошибка авторизации: токен отсутствует");
       setShowLoadingModal(false);
       return;
     }
+    
+    const data = {
+      room_choice: selectedRoom,
+      style_budget_choice: selectedBudgetStyle,
+      input_image: cleanedPhoto,
+    };
+  
     console.log("Bearer token:", bearerToken); // Проверка значения токена
     console.log("Запрос на URL:", url);
     console.log("Заголовки запроса:", {
       Authorization: `Bearer ${bearerToken}`,
     });
     console.log("Тело запроса:", data);
-
-    const data = {
-      room_choice: selectedRoom,
-      style_budget_choice: selectedBudgetStyle,
-      input_image: cleanedPhoto,
-    };
-
+  
     try {
       console.log("Отправка запроса...");
-      const response = await axios.post(url, data, {
+      const response = await axios.post(url, data, { // добавил await здесь
         headers: {
           Authorization: `Bearer ${bearerToken}`,
         },
@@ -102,6 +104,7 @@ const RenderingZone = () => {
       setIsLoading(false);
     }
   };
+  
   const handleCancel = () => {
     setShowConfirmationModal(false); // Закрыть окно подтверждения
   };
