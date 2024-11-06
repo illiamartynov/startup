@@ -1,4 +1,5 @@
 import React from "react";
+import CircularProgressWithIcon from "../../Components/Modals/CircularProgressWithIcon";
 import styles from "../FinalProjectStep/FinalProjectStep.module.css";
 
 const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
@@ -13,27 +14,25 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
 
   return (
     <div className={styles.finalProjectWrapper}>
-      {/* Отображение загруженного фото пользователя */}
-      
+      {/* Отображение CircularProgressWithIcon, если finalImage еще не загружено */}
+      {isLoading && !finalImage && <CircularProgressWithIcon duration={3000} />}
 
-      {/* Блок с кнопками */}
-      <div className={styles.buttonContainer}>
+      {/* Отображение загруженного фото пользователя */}
       {photo && (
         <div className={styles.uploadedPhotoWrapper}>
           <img src={photo} alt="Uploaded" className={styles.uploadedPhoto} />
         </div>
       )}
+
+      {/* Показ финального изображения, если оно доступно */}
       {finalImage && (
         <div className={styles.finalImageWrapper}>
-          <img src={finalImage} alt="Final" className={styles.finalImage} />
+          <img src={finalImage} alt="Final" className={styles.uploadedPhoto} />
         </div>
       )}
-        {/* <button className={styles.newVisualizationButton}>
-          Nowa wizualizacja
-        </button>
-        <button className={styles.uploadNewPhotoButton}>
-          Wgraj nowe zdjęcie
-        </button> */}
+
+      {/* Блок с кнопками */}
+      <div className={styles.buttonContainer}>
         <button className={styles.saveButton} onClick={handleDownload}>
           Zapisz
         </button>
@@ -42,12 +41,8 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
         </button>
       </div>
 
-      {/* Показ финального изображения, если оно доступно */}
-      
-
-      {/* Показ ошибки и загрузки */}
+      {/* Показ ошибки */}
       {error && <p className={styles.error}>{error}</p>}
-      {isLoading && <p className={styles.loading}>Loading...</p>}
     </div>
   );
 };
