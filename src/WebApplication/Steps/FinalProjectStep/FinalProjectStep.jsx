@@ -2,7 +2,16 @@ import React from "react";
 import CircularProgressWithIcon from "../../Components/Modals/CircularProgressWithIcon";
 import styles from "../FinalProjectStep/FinalProjectStep.module.css";
 
-const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLoading, error }) => {
+const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, error }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Если finalImage загружено, то останавливаем показ лоадера
+    if (finalImage) {
+      setIsLoading(false);
+    }
+  }, [finalImage]);
+
   const handleDownload = () => {
     if (finalImage) {
       const link = document.createElement("a");
@@ -12,9 +21,14 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
     }
   };
 
+  const onFinishClick = () => {
+    setIsLoading(true); // Запускаем лоадер
+    onFinish(); // Вызываем переданный onFinish для начала загрузки изображения
+  };
+
   return (
     <div className={styles.finalProjectWrapper}>
-      {/* Отображение CircularProgressWithIcon, если finalImage еще не загружено */}
+      {/* Отображение CircularProgressWithIcon, если идет загрузка */}
       {isLoading && !finalImage && <CircularProgressWithIcon duration={3000} />}
 
       {/* Отображение загруженного фото пользователя */}
@@ -36,7 +50,7 @@ const FinalProjectStep = ({ room, budgetStyle, photo, onFinish, finalImage, isLo
         <button className={styles.saveButton} onClick={handleDownload}>
           Zapisz
         </button>
-        <button className={styles.shortOfferButton} onClick={onFinish}>
+        <button className={styles.shortOfferButton} onClick={onFinishClick}>
           Let's go
         </button>
       </div>
