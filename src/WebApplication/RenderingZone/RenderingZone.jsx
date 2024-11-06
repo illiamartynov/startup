@@ -125,7 +125,7 @@ const RenderingZone = () => {
     try {
       const response = await axios.post(url, data, {
         headers: {
-          Authorization: $`{bearerToken}`,
+          Authorization: `${bearerToken}`,
         },
       });
 
@@ -138,7 +138,7 @@ const RenderingZone = () => {
 
       // Выводим заголовки и тело запроса в консоль для отладки
       // console.log("Request headers:", {
-      //   Authorization: ${bearerToken},
+      //   Authorization: `${bearerToken}`,
       // });
       // console.log("Request body:", data);
       // console.log("Link body:", url);
