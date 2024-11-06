@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import CircularProgressWithIcon from "../../Components/Modals/CircularProgressWithIcon";
 import styles from "../FinalProjectStep/FinalProjectStep.module.css";
 
