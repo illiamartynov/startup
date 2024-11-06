@@ -7,9 +7,9 @@ import styles from "../RoomStep/Room.module.css";
 
 const RoomStep = ({ onSelect, uploadedPhoto }) => {
   const rooms = [
-    { name: "SYPIALNIA", image: bedroomImage },
-    { name: "SALON", image: livingRoomImage },
-    { name: "KUCHNIA", image: kitchenRoom },
+    { name: "living room", image: livingRoomImage },
+    { name: "bedroom", image: bedroomImage },
+    { name: "kitchen", image: kitchenRoom },
   ];
 
   const [selectedRoom, setSelectedRoom] = useState(rooms[0].name);

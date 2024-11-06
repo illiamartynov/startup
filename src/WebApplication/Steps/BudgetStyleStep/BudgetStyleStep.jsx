@@ -17,26 +17,23 @@ import scandinavianKitchen from "../../../Images/webApp/styles/kitchens/Scandina
 const BudgetStyleStep = ({ onSelect, selectedRoom, uploadedPhoto }) => {
   let options = [];
 
-  if (selectedRoom === "SYPIALNIA") {
+  if (selectedRoom === "living room") {
     options = [
-      { name: "Ekonomiczny", image: contemporaryLivingRoom, priceRange: "0 zł - 2000 zł/m²" },
-      { name: "Standard", image: minimalisticLivingRoom, priceRange: "2000 zł - 4000 zł/m²" },
-      { name: "Gold", image: scandinavianLivingRoom, priceRange: "4000 zł - 6000 zł/m²" },
-      { name: "Premium", image: scandinavianLivingRoom, priceRange: "od 6000 zł/m²" },
+      { name: "Contemporary, High-End", image: contemporaryLivingRoom },
+      { name: "Minimalistic, Average", image: minimalisticLivingRoom },
+      { name: "Scandinavian, Moderate", image: scandinavianLivingRoom },
     ];
-  } else if (selectedRoom === "SALON") {
+  } else if (selectedRoom === "bedroom") {
     options = [
-      { name: "Ekonomiczny", image: contemporaryBedroom, priceRange: "0 zł - 2000 zł/m²" },
-      { name: "Standard", image: minimalisticBedroom, priceRange: "2000 zł - 4000 zł/m²" },
-      { name: "Gold", image: scandinavianBedroom, priceRange: "4000 zł - 6000 zł/m²" },
-      { name: "Premium", image: scandinavianBedroom, priceRange: "od 6000 zł/m²" },
+      { name: "Contemporary, High-End", image: contemporaryBedroom },
+      { name: "Minimalistic, Average", image: minimalisticBedroom },
+      { name: "Scandinavian, Moderate", image: scandinavianBedroom },
     ];
-  } else if (selectedRoom === "KUCHNIA") {
+  } else if (selectedRoom === "kitchen") {
     options = [
-      { name: "Ekonomiczny", image: contemporaryKitchen, priceRange: "0 zł - 2000 zł/m²" },
-      { name: "Standard", image: minimalisticKitchen, priceRange: "2000 zł - 4000 zł/m²" },
-      { name: "Gold", image: scandinavianKitchen, priceRange: "4000 zł - 6000 zł/m²" },
-      { name: "Premium", image: scandinavianKitchen, priceRange: "od 6000 zł/m²" },
+      { name: "Contemporary, High-End", image: contemporaryKitchen },
+      { name: "Minimalistic, Average", image: minimalisticKitchen },
+      { name: "Scandinavian, Moderate", image: scandinavianKitchen },
     ];
   }
 
